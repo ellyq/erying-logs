@@ -1,0 +1,1571 @@
+[    0.000000] Linux version 6.5.11-300.fc39.x86_64 (mockbuild@d23353abed4340e492bce6e111e27898) (gcc (GCC) 13.2.1 20231011 (Red Hat 13.2.1-4), GNU ld version 2.40-13.fc39) #1 SMP PREEMPT_DYNAMIC Wed Nov  8 22:37:57 UTC 2023
+[    0.000000] Command line: BOOT_IMAGE=(hd0,gpt2)/vmlinuz-6.5.11-300.fc39.x86_64 root=UUID=89493ea3-6e01-4664-8009-b6d08fb94246 ro console=ttyS0,115200n8 console=tty0 loglevel=15 net.ifnames=0 selinux=0 intel_iommu=on iommu=pt acpi.debug_level=0x2 acpi.debug_layer=0xFFFFFFFF drm.debug=0xe
+[    0.000000] x86/split lock detection: #AC: crashing the kernel on kernel split_locks and warning on user-space split_locks
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009efff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009f000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000423ccfff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000423cd000-0x00000000454ccfff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000454cd000-0x0000000045598fff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x0000000045599000-0x0000000045661fff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x0000000045662000-0x0000000045ffefff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000045fff000-0x0000000045ffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000046000000-0x0000000049ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000004a200000-0x000000004a3fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000004b000000-0x00000000503fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000c0000000-0x00000000cfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fe000000-0x00000000fe010fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed20000-0x00000000fed7ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x00000008afbfffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] efi: EFI v2.7 by American Megatrends
+[    0.000000] efi: ACPI=0x455d7000 ACPI 2.0=0x455d7014 SMBIOS=0x45db6000 SMBIOS 3.0=0x45db5000 MEMATTR=0x404c7018 MOKvar=0x45d91000 
+[    0.000000] efi: Remove mem52: MMIO range=[0xc0000000-0xcfffffff] (256MB) from e820 map
+[    0.000000] e820: remove [mem 0xc0000000-0xcfffffff] reserved
+[    0.000000] efi: Not removing mem53: MMIO range=[0xfe000000-0xfe010fff] (68KB) from e820 map
+[    0.000000] efi: Not removing mem54: MMIO range=[0xfec00000-0xfec00fff] (4KB) from e820 map
+[    0.000000] efi: Not removing mem55: MMIO range=[0xfed00000-0xfed00fff] (4KB) from e820 map
+[    0.000000] efi: Not removing mem57: MMIO range=[0xfee00000-0xfee00fff] (4KB) from e820 map
+[    0.000000] efi: Remove mem58: MMIO range=[0xff000000-0xffffffff] (16MB) from e820 map
+[    0.000000] e820: remove [mem 0xff000000-0xffffffff] reserved
+[    0.000000] secureboot: Secure boot disabled
+[    0.000000] SMBIOS 3.3.0 present.
+[    0.000000] DMI: INTEL HM570/HM570, BIOS THM570106 06/14/2022
+[    0.000000] tsc: Detected 3100.000 MHz processor
+[    0.000000] tsc: Detected 3110.400 MHz TSC
+[    0.003465] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.003468] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.003479] last_pfn = 0x8afc00 max_arch_pfn = 0x400000000
+[    0.003484] MTRR map: 6 entries (3 fixed + 3 variable; max 23), built from 10 variable MTRRs
+[    0.003486] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.004081] last_pfn = 0x46000 max_arch_pfn = 0x400000000
+[    0.042036] Using GB pages for direct mapping
+[    0.042344] secureboot: Secure boot disabled
+[    0.042344] RAMDISK: [mem 0x3a54a000-0x3c98dfff]
+[    0.042347] ACPI: Early table checksum verification disabled
+[    0.042350] ACPI: RSDP 0x00000000455D7014 000024 (v02 ALASKA)
+[    0.042354] ACPI: XSDT 0x00000000455D6728 0000EC (v01 ALASKA A M I    01072009 AMI  01000013)
+[    0.042360] ACPI: FACP 0x0000000045591000 000114 (v06 ALASKA A M I    01072009 AMI  01000013)
+[    0.042365] ACPI: DSDT 0x0000000045536000 05A00E (v02 ALASKA A M I    01072009 INTL 20191018)
+[    0.042369] ACPI: FACS 0x0000000045660000 000040
+[    0.042372] ACPI: SSDT 0x0000000045594000 00255D (v02 CpuRef CpuSsdt  00003000 INTL 20191018)
+[    0.042375] ACPI: SSDT 0x0000000045593000 0003E0 (v02 PmRef  Cpu0Tst  00003000 INTL 20191018)
+[    0.042379] ACPI: SSDT 0x0000000045592000 000B37 (v02 PmRef  ApTst    00003000 INTL 20191018)
+[    0.042382] ACPI: FIDT 0x0000000045535000 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.042385] ACPI: SSDT 0x0000000045532000 002E3C (v02 SaSsdt SaSsdt   00003000 INTL 20191018)
+[    0.042388] ACPI: SSDT 0x000000004552E000 003378 (v02 INTEL  IgfxSsdt 00003000 INTL 20191018)
+[    0.042391] ACPI: SSDT 0x0000000045522000 00B392 (v02 INTEL  TcssSsdt 00001000 INTL 20191018)
+[    0.042394] ACPI: HPET 0x0000000045598000 000038 (v01 ALASKA A M I    01072009 AMI  01000013)
+[    0.042398] ACPI: APIC 0x0000000045597000 00012C (v04 ALASKA A M I    01072009 AMI  01000013)
+[    0.042401] ACPI: SSDT 0x0000000045521000 000E7C (v02 ALASKA Ther_Rvp 00001000 INTL 20191018)
+[    0.042404] ACPI: NHLT 0x000000004551F000 001B35 (v00 ALASKA A M I    01072009 AMI  01000013)
+[    0.042407] ACPI: UEFI 0x00000000455C4000 000048 (v01 ALASKA A M I    01072009 AMI  01000013)
+[    0.042410] ACPI: LPIT 0x000000004551E000 0000CC (v01 ALASKA A M I    01072009 AMI  01000013)
+[    0.042413] ACPI: SSDT 0x000000004551A000 002720 (v02 ALASKA PtidDevc 00001000 INTL 20191018)
+[    0.042416] ACPI: SSDT 0x0000000045519000 00012A (v02 ALASKA TbtTypeC 00000000 INTL 20191018)
+[    0.042420] ACPI: DBGP 0x0000000045518000 000034 (v01 ALASKA A M I    01072009 AMI  01000013)
+[    0.042423] ACPI: DBG2 0x0000000045517000 000054 (v00 ALASKA A M I    01072009 AMI  01000013)
+[    0.042426] ACPI: DMAR 0x0000000045516000 000088 (v02 INTEL  EDK2     00000002      01000013)
+[    0.042430] ACPI: SSDT 0x0000000045515000 000D58 (v02 INTEL  xh_thdd4 00000000 INTL 20191018)
+[    0.042433] ACPI: MCFG 0x0000000045514000 00003C (v01                 00000001      00000000)
+[    0.042436] ACPI: SSDT 0x0000000045513000 000144 (v02 Intel  ADebTabl 00001000 INTL 20191018)
+[    0.042439] ACPI: PTDT 0x0000000045512000 000CA8 (v00 ALASKA A M I    00000005 MSFT 0100000D)
+[    0.042442] ACPI: WSMT 0x000000004551D000 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+[    0.042445] ACPI: FPDT 0x0000000045511000 000044 (v01 ALASKA A M I    01072009 AMI  01000013)
+[    0.042447] ACPI: Reserving FACP table memory at [mem 0x45591000-0x45591113]
+[    0.042449] ACPI: Reserving DSDT table memory at [mem 0x45536000-0x4559000d]
+[    0.042450] ACPI: Reserving FACS table memory at [mem 0x45660000-0x4566003f]
+[    0.042450] ACPI: Reserving SSDT table memory at [mem 0x45594000-0x4559655c]
+[    0.042451] ACPI: Reserving SSDT table memory at [mem 0x45593000-0x455933df]
+[    0.042452] ACPI: Reserving SSDT table memory at [mem 0x45592000-0x45592b36]
+[    0.042453] ACPI: Reserving FIDT table memory at [mem 0x45535000-0x4553509b]
+[    0.042454] ACPI: Reserving SSDT table memory at [mem 0x45532000-0x45534e3b]
+[    0.042454] ACPI: Reserving SSDT table memory at [mem 0x4552e000-0x45531377]
+[    0.042455] ACPI: Reserving SSDT table memory at [mem 0x45522000-0x4552d391]
+[    0.042456] ACPI: Reserving HPET table memory at [mem 0x45598000-0x45598037]
+[    0.042457] ACPI: Reserving APIC table memory at [mem 0x45597000-0x4559712b]
+[    0.042457] ACPI: Reserving SSDT table memory at [mem 0x45521000-0x45521e7b]
+[    0.042458] ACPI: Reserving NHLT table memory at [mem 0x4551f000-0x45520b34]
+[    0.042459] ACPI: Reserving UEFI table memory at [mem 0x455c4000-0x455c4047]
+[    0.042460] ACPI: Reserving LPIT table memory at [mem 0x4551e000-0x4551e0cb]
+[    0.042460] ACPI: Reserving SSDT table memory at [mem 0x4551a000-0x4551c71f]
+[    0.042461] ACPI: Reserving SSDT table memory at [mem 0x45519000-0x45519129]
+[    0.042462] ACPI: Reserving DBGP table memory at [mem 0x45518000-0x45518033]
+[    0.042462] ACPI: Reserving DBG2 table memory at [mem 0x45517000-0x45517053]
+[    0.042463] ACPI: Reserving DMAR table memory at [mem 0x45516000-0x45516087]
+[    0.042464] ACPI: Reserving SSDT table memory at [mem 0x45515000-0x45515d57]
+[    0.042465] ACPI: Reserving MCFG table memory at [mem 0x45514000-0x4551403b]
+[    0.042465] ACPI: Reserving SSDT table memory at [mem 0x45513000-0x45513143]
+[    0.042466] ACPI: Reserving PTDT table memory at [mem 0x45512000-0x45512ca7]
+[    0.042467] ACPI: Reserving WSMT table memory at [mem 0x4551d000-0x4551d027]
+[    0.042468] ACPI: Reserving FPDT table memory at [mem 0x45511000-0x45511043]
+[    0.042741] No NUMA configuration found
+[    0.042742] Faking a node at [mem 0x0000000000000000-0x00000008afbfffff]
+[    0.042749] NODE_DATA(0) allocated [mem 0x8afbd5000-0x8afbfffff]
+[    0.042942] Zone ranges:
+[    0.042943]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.042945]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.042946]   Normal   [mem 0x0000000100000000-0x00000008afbfffff]
+[    0.042948]   Device   empty
+[    0.042949] Movable zone start for each node
+[    0.042950] Early memory node ranges
+[    0.042951]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.042952]   node   0: [mem 0x0000000000100000-0x00000000423ccfff]
+[    0.042953]   node   0: [mem 0x0000000045fff000-0x0000000045ffffff]
+[    0.042954]   node   0: [mem 0x0000000100000000-0x00000008afbfffff]
+[    0.042957] Initmem setup node 0 [mem 0x0000000000001000-0x00000008afbfffff]
+[    0.042962] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.042987] On node 0, zone DMA: 97 pages in unavailable ranges
+[    0.044695] On node 0, zone DMA32: 15410 pages in unavailable ranges
+[    0.092845] On node 0, zone Normal: 8192 pages in unavailable ranges
+[    0.092856] On node 0, zone Normal: 1024 pages in unavailable ranges
+[    0.092877] Reserving Intel graphics memory at [mem 0x4c800000-0x503fffff]
+[    0.093300] ACPI: PM-Timer IO Port: 0x1808
+[    0.093308] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.093310] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.093310] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.093311] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.093312] ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+[    0.093313] ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+[    0.093313] ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+[    0.093314] ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+[    0.093315] ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+[    0.093315] ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+[    0.093316] ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+[    0.093317] ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+[    0.093317] ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+[    0.093318] ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+[    0.093319] ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+[    0.093320] ACPI: LAPIC_NMI (acpi_id[0x10] high edge lint[0x1])
+[    0.093360] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-119
+[    0.093363] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.093364] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.093369] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.093370] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.093374] TSC deadline timer available
+[    0.093375] smpboot: Allowing 16 CPUs, 0 hotplug CPUs
+[    0.093390] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.093392] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x000fffff]
+[    0.093393] PM: hibernation: Registered nosave memory: [mem 0x423cd000-0x454ccfff]
+[    0.093394] PM: hibernation: Registered nosave memory: [mem 0x454cd000-0x45598fff]
+[    0.093395] PM: hibernation: Registered nosave memory: [mem 0x45599000-0x45661fff]
+[    0.093396] PM: hibernation: Registered nosave memory: [mem 0x45662000-0x45ffefff]
+[    0.093397] PM: hibernation: Registered nosave memory: [mem 0x46000000-0x49ffffff]
+[    0.093398] PM: hibernation: Registered nosave memory: [mem 0x4a000000-0x4a1fffff]
+[    0.093399] PM: hibernation: Registered nosave memory: [mem 0x4a200000-0x4a3fffff]
+[    0.093399] PM: hibernation: Registered nosave memory: [mem 0x4a400000-0x4affffff]
+[    0.093400] PM: hibernation: Registered nosave memory: [mem 0x4b000000-0x503fffff]
+[    0.093401] PM: hibernation: Registered nosave memory: [mem 0x50400000-0xfdffffff]
+[    0.093402] PM: hibernation: Registered nosave memory: [mem 0xfe000000-0xfe010fff]
+[    0.093402] PM: hibernation: Registered nosave memory: [mem 0xfe011000-0xfebfffff]
+[    0.093403] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.093403] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfecfffff]
+[    0.093404] PM: hibernation: Registered nosave memory: [mem 0xfed00000-0xfed00fff]
+[    0.093405] PM: hibernation: Registered nosave memory: [mem 0xfed01000-0xfed1ffff]
+[    0.093405] PM: hibernation: Registered nosave memory: [mem 0xfed20000-0xfed7ffff]
+[    0.093406] PM: hibernation: Registered nosave memory: [mem 0xfed80000-0xfedfffff]
+[    0.093407] PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.093407] PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xffffffff]
+[    0.093409] [mem 0x50400000-0xfdffffff] available for PCI devices
+[    0.093411] Booting paravirtualized kernel on bare hardware
+[    0.093413] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.101461] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:16 nr_cpu_ids:16 nr_node_ids:1
+[    0.102181] percpu: Embedded 64 pages/cpu s225280 r8192 d28672 u262144
+[    0.102187] pcpu-alloc: s225280 r8192 d28672 u262144 alloc=1*2097152
+[    0.102189] pcpu-alloc: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 12 13 14 15 
+[    0.102213] Kernel command line: BOOT_IMAGE=(hd0,gpt2)/vmlinuz-6.5.11-300.fc39.x86_64 root=UUID=89493ea3-6e01-4664-8009-b6d08fb94246 ro console=ttyS0,115200n8 console=tty0 loglevel=15 net.ifnames=0 selinux=0 intel_iommu=on iommu=pt acpi.debug_level=0x2 acpi.debug_layer=0xFFFFFFFF drm.debug=0xe
+[    0.102327] DMAR: IOMMU enabled
+[    0.102377] Unknown kernel command line parameters "BOOT_IMAGE=(hd0,gpt2)/vmlinuz-6.5.11-300.fc39.x86_64", will be passed to user space.
+[    0.102405] random: crng init done
+[    0.105477] Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[    0.107021] Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.107278] Fallback order for Node 0: 0 
+[    0.107283] Built 1 zonelists, mobility grouping on.  Total pages: 8200782
+[    0.107284] Policy zone: Normal
+[    0.107481] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.107492] software IO TLB: area num 16.
+[    0.180252] Memory: 32506244K/33324464K available (18432K kernel code, 3267K rwdata, 14476K rodata, 4516K init, 17380K bss, 817960K reserved, 0K cma-reserved)
+[    0.180503] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=16, Nodes=1
+[    0.180530] ftrace: allocating 53609 entries in 210 pages
+[    0.190941] ftrace: allocated 210 pages with 4 groups
+[    0.191930] Dynamic Preempt: voluntary
+[    0.191979] rcu: Preemptible hierarchical RCU implementation.
+[    0.191980] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=16.
+[    0.191982] 	Trampoline variant of Tasks RCU enabled.
+[    0.191982] 	Rude variant of Tasks RCU enabled.
+[    0.191983] 	Tracing variant of Tasks RCU enabled.
+[    0.191983] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.191984] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=16
+[    0.195318] NR_IRQS: 524544, nr_irqs: 2184, preallocated irqs: 16
+[    0.195632] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.195926] kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+[    0.195969] Console: colour dummy device 80x25
+[    0.195972] printk: console [tty0] enabled
+[    0.196427] printk: console [ttyS0] enabled
+[    1.664419] ACPI: Core revision 20230331
+[    1.668769] hpet: HPET dysfunctional in PC10. Force disabled.
+[    1.674574] APIC: Switch to symmetric I/O mode setup
+[    1.679593] DMAR: Host address width 39
+[    1.683476] DMAR: DRHD base: 0x000000fed90000 flags: 0x0
+[    1.688844] DMAR: dmar0: reg_base_addr fed90000 ver 4:0 cap 1c0000c40660462 ecap 29a00f0505e
+[    1.697357] DMAR: DRHD base: 0x000000fed91000 flags: 0x1
+[    1.702720] DMAR: dmar1: reg_base_addr fed91000 ver 1:0 cap d2008c40660462 ecap f050da
+[    1.710716] DMAR: RMRR base: 0x0000004c000000 end: 0x000000503fffff
+[    1.717042] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 1
+[    1.723457] DMAR-IR: HPET id 0 under DRHD base 0xfed91000
+[    1.728905] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    1.739532] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    1.745009] x2apic enabled
+[    1.747773] Switched APIC routing to cluster x2apic.
+[    1.757887] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2cd5a8bb032, max_idle_ns: 440795365915 ns
+[    1.768506] Calibrating delay loop (skipped), value calculated using timer frequency.. 6220.80 BogoMIPS (lpj=3110400)
+[    1.769502] x86/tme: not enabled by BIOS
+[    1.769502] CPU0: Thermal monitoring enabled (TM1)
+[    1.769502] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    1.769502] process: using mwait in idle threads
+[    1.769502] CET detected: Indirect Branch Tracking enabled
+[    1.769502] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    1.769502] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    1.769502] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    1.769502] Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+[    1.769502] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    1.769502] Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+[    1.769502] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    1.769502] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    1.769502] GDS: Vulnerable: No microcode
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+[    1.769502] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    1.769502] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    1.769502] x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+[    1.769502] x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+[    1.769502] x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+[    1.769502] x86/fpu: xstate_offset[9]: 2432, xstate_sizes[9]:    8
+[    1.769502] x86/fpu: Enabled xstate features 0x2e7, context size is 2440 bytes, using 'compacted' format.
+[    1.769502] Freeing SMP alternatives memory: 48K
+[    1.769502] pid_max: default: 32768 minimum: 301
+[    1.769502] LSM: initializing lsm=lockdown,capability,yama,bpf,landlock,integrity
+[    1.769502] Yama: becoming mindful.
+[    1.769502] LSM support for eBPF active
+[    1.769502] landlock: Up and running.
+[    1.769502] Mount-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.769502] Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.769502] smpboot: CPU0: Genuine Intel(R) CPU 0000 @ 2.60GHz (family: 0x6, model: 0x8d, stepping: 0x0)
+[    1.769642] RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1.
+[    1.770516] RCU Tasks Rude: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1.
+[    1.771515] RCU Tasks Trace: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1.
+[    1.772513] Performance Events: PEBS fmt4+-baseline,  AnyThread deprecated, Icelake events, 32-deep LBR, full-width counters, Intel PMU driver.
+[    1.773503] ... version:                5
+[    1.774503] ... bit width:              48
+[    1.775503] ... generic registers:      8
+[    1.776503] ... value mask:             0000ffffffffffff
+[    1.777503] ... max period:             00007fffffffffff
+[    1.778503] ... fixed-purpose events:   4
+[    1.779503] ... event mask:             0001000f000000ff
+[    1.780610] signal: max sigframe size: 3632
+[    1.781517] Estimated ratio of average max frequency by base frequency (times 1024): 1486
+[    1.782526] rcu: Hierarchical SRCU implementation.
+[    1.783503] rcu: 	Max phase no-delay instances is 400.
+[    1.785640] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    1.786654] smp: Bringing up secondary CPUs ...
+[    1.787592] smpboot: x86: Booting SMP configuration:
+[    1.788505] .... node  #0, CPUs:        #1  #2  #3  #4  #5  #6  #7  #8  #9 #10 #11 #12 #13 #14 #15
+[    1.797544] smp: Brought up 1 node, 16 CPUs
+[    1.799504] smpboot: Max logical packages: 1
+[    1.800507] smpboot: Total of 16 processors activated (99532.80 BogoMIPS)
+[    1.803566] devtmpfs: initialized
+[    1.804548] x86/mm: Memory block size: 128MB
+[    1.807559] ACPI: PM: Registering ACPI NVS region [mem 0x45599000-0x45661fff] (823296 bytes)
+[    1.808554] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    1.809506] futex hash table entries: 4096 (order: 6, 262144 bytes, linear)
+[    1.810594] pinctrl core: initialized pinctrl subsystem
+[    1.811756] PM: RTC time: 17:56:15, date: 2023-11-25
+[    1.812909] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    1.813677] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    1.814514] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    1.815506] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    1.816521] audit: initializing netlink subsys (disabled)
+[    1.817520] audit: type=2000 audit(1700934973.049:1): state=initialized audit_enabled=0 res=1
+[    1.817603] thermal_sys: Registered thermal governor 'fair_share'
+[    1.818504] thermal_sys: Registered thermal governor 'bang_bang'
+[    1.819504] thermal_sys: Registered thermal governor 'step_wise'
+[    1.820503] thermal_sys: Registered thermal governor 'user_space'
+[    1.821514] cpuidle: using governor menu
+[    1.823570] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[    1.824505] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.825598] PCI: MMCONFIG for domain 0000 [bus 00-04] at [mem 0xc0000000-0xc04fffff] (base 0xc0000000)
+[    1.826507] PCI: not using MMCONFIG
+[    1.827506] PCI: Using configuration type 1 for base access
+[    1.828896] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    1.829594] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    1.830531] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    1.831504] HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+[    1.832505] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    1.833504] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    1.834546] cryptd: max_cpu_qlen set to 1000
+[    1.835542] raid6: skipped pq benchmark and selected avx512x4
+[    1.836504] raid6: using avx512x2 recovery algorithm
+[    1.837547] fbcon: Taking over console
+[    1.838524] ACPI: Added _OSI(Module Device)
+[    1.839503] ACPI: Added _OSI(Processor Device)
+[    1.840503] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.841503] ACPI: Added _OSI(Processor Aggregator Device)
+[    1.916639] ACPI: 12 ACPI AML tables successfully acquired and loaded
+[    1.928396] ACPI: Dynamic OEM Table Load:
+[    1.928512] ACPI: SSDT 0xFFFF989C82591400 0001CB (v02 PmRef  Cpu0Psd  00003000 INTL 20191018)
+[    1.930302] ACPI: \_SB_.PR00: _OSC native thermal LVT Acked
+[    1.931958] ACPI: Dynamic OEM Table Load:
+[    1.932517] ACPI: SSDT 0xFFFF989C81B9C000 000394 (v02 PmRef  Cpu0Cst  00003001 INTL 20191018)
+[    1.934454] ACPI: Dynamic OEM Table Load:
+[    1.934508] ACPI: SSDT 0xFFFF989C81B72000 000626 (v02 PmRef  Cpu0Ist  00003000 INTL 20191018)
+[    1.936492] ACPI: Dynamic OEM Table Load:
+[    1.936516] ACPI: SSDT 0xFFFF989C81B9A800 00028B (v02 PmRef  Cpu0Hwp  00003000 INTL 20191018)
+[    1.938574] ACPI: Dynamic OEM Table Load:
+[    1.939509] ACPI: SSDT 0xFFFF989C8015E000 0008E7 (v02 PmRef  ApIst    00003000 INTL 20191018)
+[    1.941530] ACPI: Dynamic OEM Table Load:
+[    1.942507] ACPI: SSDT 0xFFFF989C82625000 00048A (v02 PmRef  ApHwp    00003000 INTL 20191018)
+[    1.944479] ACPI: Dynamic OEM Table Load:
+[    1.944507] ACPI: SSDT 0xFFFF989C82620800 0004D4 (v02 PmRef  ApPsd    00003000 INTL 20191018)
+[    1.946449] ACPI: Dynamic OEM Table Load:
+[    1.946507] ACPI: SSDT 0xFFFF989C82622800 00048A (v02 PmRef  ApCst    00003000 INTL 20191018)
+[    1.955756] ACPI: Interpreter enabled
+[    1.956561] ACPI: PM: (supports S0 S3 S4 S5)
+[    1.957504] ACPI: Using IOAPIC for interrupt routing
+[    1.959775] PCI: MMCONFIG for domain 0000 [bus 00-04] at [mem 0xc0000000-0xc04fffff] (base 0xc0000000)
+[    1.962093] PCI: MMCONFIG at [mem 0xc0000000-0xc04fffff] reserved as ACPI motherboard resource
+[    1.962511] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.963503] PCI: Using E820 reservations for host bridge windows
+[    1.965607] ACPI: Enabled 7 GPEs in block 00 to 7F
+[    1.981339] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    1.981504] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS07._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    1.982525] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    1.983504] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS08._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    1.985334] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    1.985504] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS09._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    1.986523] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    1.987504] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS10._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    1.991871] ACPI: \_SB_.PC00.SAT0.VOL0.V0PR: New power resource
+[    1.992610] ACPI: \_SB_.PC00.SAT0.VOL1.V1PR: New power resource
+[    1.993598] ACPI: \_SB_.PC00.SAT0.VOL2.V2PR: New power resource
+[    1.999324] ACPI: \_SB_.PC00.CNVW.WRST: New power resource
+[    2.002451] ACPI: \_SB_.PC00.TBT0: New power resource
+[    2.002819] ACPI: \_SB_.PC00.TBT1: New power resource
+[    2.003803] ACPI: \_SB_.PC00.D3C_: New power resource
+[    2.011134] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    2.011504] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS01._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    2.012524] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    2.013505] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS02._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    2.014525] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    2.015504] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS03._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    2.016524] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    2.017506] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS04._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    2.049369] ACPI: \_TZ_.FN00: New power resource
+[    2.049570] ACPI: \_TZ_.FN01: New power resource
+[    2.050557] ACPI: \_TZ_.FN02: New power resource
+[    2.051554] ACPI: \_TZ_.FN03: New power resource
+[    2.052554] ACPI: \_TZ_.FN04: New power resource
+[    2.054089] ACPI: \PIN_: New power resource
+[    2.054817] ACPI: PCI Root Bridge [PC00] (domain 0000 [bus 00-04])
+[    2.055508] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.056634] acpi PNP0A08:00: _OSC: platform does not support [PCIeHotplug SHPCHotplug PME AER]
+[    2.057745] acpi PNP0A08:00: _OSC: OS now controls [PCIeCapability LTR DPC]
+[    2.058504] acpi PNP0A08:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.061672] PCI host bridge to bus 0000:00
+[    2.062504] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    2.063503] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    2.064504] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000fffff window]
+[    2.065503] pci_bus 0000:00: root bus resource [mem 0x50400000-0xbfffffff window]
+[    2.066503] pci_bus 0000:00: root bus resource [mem 0x4000000000-0x7fffffffff window]
+[    2.067504] pci_bus 0000:00: root bus resource [bus 00-04]
+[    2.068630] pci 0000:00:00.0: [8086:9a36] type 00 class 0x060000
+[    2.069613] pci 0000:00:02.0: [8086:9a60] type 00 class 0x030000
+[    2.070512] pci 0000:00:02.0: reg 0x10: [mem 0x6000000000-0x6000ffffff 64bit]
+[    2.071509] pci 0000:00:02.0: reg 0x18: [mem 0x4000000000-0x400fffffff 64bit pref]
+[    2.072507] pci 0000:00:02.0: reg 0x20: [io  0x4000-0x403f]
+[    2.073521] pci 0000:00:02.0: DMAR: Skip IOMMU disabling for graphics
+[    2.074505] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    2.075537] pci 0000:00:02.0: reg 0x344: [mem 0x00000000-0x00ffffff 64bit]
+[    2.076503] pci 0000:00:02.0: VF(n) BAR0 space: [mem 0x00000000-0x06ffffff 64bit] (contains BAR0 for 7 VFs)
+[    2.077508] pci 0000:00:02.0: reg 0x34c: [mem 0x00000000-0x1fffffff 64bit pref]
+[    2.078503] pci 0000:00:02.0: VF(n) BAR2 space: [mem 0x00000000-0xdfffffff 64bit pref] (contains BAR2 for 7 VFs)
+[    2.079669] pci 0000:00:06.0: [8086:9a0f] type 01 class 0x060400
+[    2.080581] pci 0000:00:06.0: PME# supported from D0 D3hot D3cold
+[    2.081540] pci 0000:00:06.0: PTM enabled (root), 4ns granularity
+[    2.083047] pci 0000:00:0d.0: [8086:9a17] type 00 class 0x0c0330
+[    2.083521] pci 0000:00:0d.0: reg 0x10: [mem 0x6001110000-0x600111ffff 64bit]
+[    2.084577] pci 0000:00:0d.0: PME# supported from D3hot D3cold
+[    2.087484] pci 0000:00:14.0: [8086:43ed] type 00 class 0x0c0330
+[    2.087527] pci 0000:00:14.0: reg 0x10: [mem 0x6001100000-0x600110ffff 64bit]
+[    2.088591] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    2.091423] pci 0000:00:14.2: [8086:43ef] type 00 class 0x050000
+[    2.091526] pci 0000:00:14.2: reg 0x10: [mem 0x6001124000-0x6001127fff 64bit]
+[    2.092516] pci 0000:00:14.2: reg 0x18: [mem 0x6001132000-0x6001132fff 64bit]
+[    2.093734] pci 0000:00:15.0: [8086:43e8] type 00 class 0x0c8000
+[    2.094568] pci 0000:00:15.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.096019] pci 0000:00:15.1: [8086:43e9] type 00 class 0x0c8000
+[    2.096569] pci 0000:00:15.1: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.097986] pci 0000:00:15.2: [8086:43ea] type 00 class 0x0c8000
+[    2.098567] pci 0000:00:15.2: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.100003] pci 0000:00:15.3: [8086:43eb] type 00 class 0x0c8000
+[    2.100570] pci 0000:00:15.3: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.101926] pci 0000:00:17.0: [8086:43d3] type 00 class 0x010601
+[    2.102520] pci 0000:00:17.0: reg 0x10: [mem 0x52500000-0x52501fff]
+[    2.103513] pci 0000:00:17.0: reg 0x14: [mem 0x52503000-0x525030ff]
+[    2.104513] pci 0000:00:17.0: reg 0x18: [io  0x4090-0x4097]
+[    2.105513] pci 0000:00:17.0: reg 0x1c: [io  0x4080-0x4083]
+[    2.106513] pci 0000:00:17.0: reg 0x20: [io  0x4060-0x407f]
+[    2.107513] pci 0000:00:17.0: reg 0x24: [mem 0x52502000-0x525027ff]
+[    2.108554] pci 0000:00:17.0: PME# supported from D3hot
+[    2.109911] pci 0000:00:19.0: [8086:43ad] type 00 class 0x0c8000
+[    2.110568] pci 0000:00:19.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.111995] pci 0000:00:19.1: [8086:43ae] type 00 class 0x0c8000
+[    2.112567] pci 0000:00:19.1: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.113937] pci 0000:00:1d.0: [8086:43b0] type 01 class 0x060400
+[    2.114601] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    2.116134] pci 0000:00:1d.2: [8086:43b2] type 01 class 0x060400
+[    2.116618] pci 0000:00:1d.2: PME# supported from D0 D3hot D3cold
+[    2.117542] pci 0000:00:1d.2: PTM enabled (root), 4ns granularity
+[    2.119145] pci 0000:00:1d.3: [8086:43b3] type 01 class 0x060400
+[    2.119618] pci 0000:00:1d.3: PME# supported from D0 D3hot D3cold
+[    2.120542] pci 0000:00:1d.3: PTM enabled (root), 4ns granularity
+[    2.122229] pci 0000:00:1e.0: [8086:43a8] type 00 class 0x078000
+[    2.122568] pci 0000:00:1e.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.124034] pci 0000:00:1e.3: [8086:43ab] type 00 class 0x0c8000
+[    2.124568] pci 0000:00:1e.3: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.125910] pci 0000:00:1f.0: [8086:438b] type 00 class 0x060100
+[    2.126857] pci 0000:00:1f.3: [8086:43c8] type 00 class 0x040300
+[    2.127542] pci 0000:00:1f.3: reg 0x10: [mem 0x6001120000-0x6001123fff 64bit]
+[    2.128553] pci 0000:00:1f.3: reg 0x20: [mem 0x6001000000-0x60010fffff 64bit]
+[    2.129601] pci 0000:00:1f.3: PME# supported from D3hot D3cold
+[    2.130957] pci 0000:00:1f.4: [8086:43a3] type 00 class 0x0c0500
+[    2.131528] pci 0000:00:1f.4: reg 0x10: [mem 0x6001128000-0x60011280ff 64bit]
+[    2.132533] pci 0000:00:1f.4: reg 0x20: [io  0xefa0-0xefbf]
+[    2.133755] pci 0000:00:1f.5: [8086:43a4] type 00 class 0x0c8000
+[    2.134522] pci 0000:00:1f.5: reg 0x10: [mem 0xfe010000-0xfe010fff]
+[    2.135679] pci 0000:01:00.0: [2646:5013] type 00 class 0x010802
+[    2.136548] pci 0000:01:00.0: reg 0x10: [mem 0x52400000-0x52403fff 64bit]
+[    2.138267] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    2.138506] pci 0000:00:06.0:   bridge window [mem 0x52400000-0x524fffff]
+[    2.139551] pci 0000:00:1d.0: PCI bridge to [bus 02]
+[    2.140582] pci 0000:03:00.0: [10ec:8168] type 00 class 0x020000
+[    2.141523] pci 0000:03:00.0: reg 0x10: [io  0x3000-0x30ff]
+[    2.142528] pci 0000:03:00.0: reg 0x18: [mem 0x52304000-0x52304fff 64bit]
+[    2.143519] pci 0000:03:00.0: reg 0x20: [mem 0x52300000-0x52303fff 64bit]
+[    2.144627] pci 0000:03:00.0: supports D1 D2
+[    2.145503] pci 0000:03:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    2.146707] pci 0000:00:1d.2: PCI bridge to [bus 03]
+[    2.147506] pci 0000:00:1d.2:   bridge window [io  0x3000-0x3fff]
+[    2.148507] pci 0000:00:1d.2:   bridge window [mem 0x52300000-0x523fffff]
+[    2.149582] pci 0000:04:00.0: [1102:000b] type 00 class 0x040300
+[    2.150532] pci 0000:04:00.0: reg 0x10: [mem 0x52200000-0x5220ffff 64bit]
+[    2.151521] pci 0000:04:00.0: reg 0x18: [mem 0x52000000-0x521fffff 64bit]
+[    2.152520] pci 0000:04:00.0: reg 0x20: [mem 0x51000000-0x51ffffff 64bit]
+[    2.153748] pci 0000:00:1d.3: PCI bridge to [bus 04]
+[    2.154508] pci 0000:00:1d.3:   bridge window [mem 0x51000000-0x522fffff]
+[    2.159945] ACPI: PCI: Interrupt link LNKA configured for IRQ 0
+[    2.160601] ACPI: PCI: Interrupt link LNKB configured for IRQ 1
+[    2.161600] ACPI: PCI: Interrupt link LNKC configured for IRQ 0
+[    2.162611] ACPI: PCI: Interrupt link LNKD configured for IRQ 0
+[    2.163600] ACPI: PCI: Interrupt link LNKE configured for IRQ 0
+[    2.164600] ACPI: PCI: Interrupt link LNKF configured for IRQ 0
+[    2.165600] ACPI: PCI: Interrupt link LNKG configured for IRQ 0
+[    2.166617] ACPI: PCI: Interrupt link LNKH configured for IRQ 0
+[    2.181014] iommu: Default domain type: Passthrough (set via kernel command line)
+[    2.181578] SCSI subsystem initialized
+[    2.182516] libata version 3.00 loaded.
+[    2.183522] ACPI: bus type USB registered
+[    2.184529] usbcore: registered new interface driver usbfs
+[    2.185515] usbcore: registered new interface driver hub
+[    2.186510] usbcore: registered new device driver usb
+[    2.187526] pps_core: LinuxPPS API ver. 1 registered
+[    2.188505] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    2.189524] PTP clock support registered
+[    2.190521] EDAC MC: Ver: 3.0.0
+[    2.191741] efivars: Registered efivars operations
+[    2.192723] NetLabel: Initializing
+[    2.193504] NetLabel:  domain hash size = 128
+[    2.194503] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    2.195518] NetLabel:  unlabeled traffic allowed by default
+[    2.196507] mctp: management component transport protocol core
+[    2.197503] NET: Registered PF_MCTP protocol family
+[    2.198506] PCI: Using ACPI for IRQ routing
+[    2.199504] PCI: pci_cache_line_size set to 64 bytes
+[    2.200689] pci 0000:00:1f.5: can't claim BAR 0 [mem 0xfe010000-0xfe010fff]: no compatible bridge window
+[    2.201691] e820: reserve RAM buffer [mem 0x0009f000-0x0009ffff]
+[    2.202504] e820: reserve RAM buffer [mem 0x423cd000-0x43ffffff]
+[    2.203503] e820: reserve RAM buffer [mem 0x46000000-0x47ffffff]
+[    2.204503] e820: reserve RAM buffer [mem 0x8afc00000-0x8afffffff]
+[    2.205533] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    2.206502] pci 0000:00:02.0: vgaarb: bridge control possible
+[    2.206502] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    2.206507] vgaarb: loaded
+[    2.207625] clocksource: Switched to clocksource tsc-early
+[    2.213189] VFS: Disk quotas dquot_6.6.0
+[    2.217172] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    2.224172] pnp: PnP ACPI init
+[    2.227484] system 00:00: [io  0x0a00-0x0a1f] has been reserved
+[    2.233468] system 00:00: [io  0x0a20-0x0a2f] has been reserved
+[    2.239448] system 00:00: [io  0x0a30-0x0a3f] has been reserved
+[    2.246023] pnp 00:01: [dma 0 disabled]
+[    2.250068] system 00:02: [io  0x0680-0x069f] has been reserved
+[    2.256045] system 00:02: [io  0x164e-0x164f] has been reserved
+[    2.262147] system 00:03: [io  0x1854-0x1857] has been reserved
+[    2.268815] pnp 00:04: disabling [mem 0xc0000000-0xcfffffff] because it overlaps 0000:00:02.0 BAR 9 [mem 0x00000000-0xdfffffff 64bit pref]
+[    2.281365] system 00:04: [mem 0xfedc0000-0xfedc7fff] has been reserved
+[    2.288043] system 00:04: [mem 0xfeda0000-0xfeda0fff] has been reserved
+[    2.294727] system 00:04: [mem 0xfeda1000-0xfeda1fff] has been reserved
+[    2.301402] system 00:04: [mem 0xfed20000-0xfed7ffff] has been reserved
+[    2.308080] system 00:04: [mem 0xfed90000-0xfed93fff] could not be reserved
+[    2.315106] system 00:04: [mem 0xfed45000-0xfed8ffff] could not be reserved
+[    2.322126] system 00:04: [mem 0xfee00000-0xfeefffff] could not be reserved
+[    2.332339] system 00:05: [io  0x1800-0x18fe] could not be reserved
+[    2.338688] system 00:05: [mem 0xfe000000-0xfe01ffff] could not be reserved
+[    2.345726] system 00:05: [mem 0xfe04c000-0xfe04ffff] has been reserved
+[    2.352407] system 00:05: [mem 0xfe050000-0xfe0affff] has been reserved
+[    2.359082] system 00:05: [mem 0xfe0d0000-0xfe0fffff] has been reserved
+[    2.365755] system 00:05: [mem 0xfe200000-0xfe7fffff] has been reserved
+[    2.372424] system 00:05: [mem 0xff000000-0xffffffff] has been reserved
+[    2.379092] system 00:05: [mem 0xfd000000-0xfd68ffff] has been reserved
+[    2.385761] system 00:05: [mem 0xfd6c0000-0xfd6cffff] has been reserved
+[    2.392437] system 00:05: [mem 0xfd6f0000-0xfdffffff] has been reserved
+[    2.399469] system 00:06: [io  0x2000-0x20fe] has been reserved
+[    2.405850] pnp: PnP ACPI: found 8 devices
+[    2.415726] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    2.424731] NET: Registered PF_INET protocol family
+[    2.429978] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    2.440541] tcp_listen_portaddr_hash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    2.449352] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    2.457181] TCP established hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    2.465562] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    2.473283] TCP: Hash tables configured (established 262144 bind 65536)
+[    2.480129] MPTCP token hash table entries: 32768 (order: 7, 786432 bytes, linear)
+[    2.487813] UDP hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    2.494807] UDP-Lite hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[    2.502299] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    2.508029] NET: Registered PF_XDP protocol family
+[    2.512890] pci 0000:00:1d.0: bridge window [io  0x1000-0x0fff] to [bus 02] add_size 1000
+[    2.521146] pci 0000:00:1d.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 02] add_size 200000 add_align 100000
+[    2.532705] pci 0000:00:1d.0: bridge window [mem 0x00100000-0x000fffff] to [bus 02] add_size 200000 add_align 100000
+[    2.543309] pci 0000:00:02.0: BAR 9: assigned [mem 0x4020000000-0x40ffffffff 64bit pref]
+[    2.551468] pci 0000:00:02.0: BAR 7: assigned [mem 0x4010000000-0x4016ffffff 64bit]
+[    2.559192] pci 0000:00:1d.0: BAR 14: assigned [mem 0x50400000-0x505fffff]
+[    2.566130] pci 0000:00:1d.0: BAR 15: assigned [mem 0x4017000000-0x40171fffff 64bit pref]
+[    2.574373] pci 0000:00:15.0: BAR 0: assigned [mem 0x4017200000-0x4017200fff 64bit]
+[    2.582138] pci 0000:00:15.1: BAR 0: assigned [mem 0x4017201000-0x4017201fff 64bit]
+[    2.589914] pci 0000:00:15.2: BAR 0: assigned [mem 0x4017202000-0x4017202fff 64bit]
+[    2.597686] pci 0000:00:15.3: BAR 0: assigned [mem 0x4017203000-0x4017203fff 64bit]
+[    2.605458] pci 0000:00:19.0: BAR 0: assigned [mem 0x4017204000-0x4017204fff 64bit]
+[    2.613229] pci 0000:00:19.1: BAR 0: assigned [mem 0x4017205000-0x4017205fff 64bit]
+[    2.621003] pci 0000:00:1d.0: BAR 13: assigned [io  0x5000-0x5fff]
+[    2.627243] pci 0000:00:1e.0: BAR 0: assigned [mem 0x4017206000-0x4017206fff 64bit]
+[    2.635015] pci 0000:00:1e.3: BAR 0: assigned [mem 0x4017207000-0x4017207fff 64bit]
+[    2.642785] resource: avoiding allocation from e820 entry [mem 0x0009f000-0x000fffff]
+[    2.650679] pci 0000:00:1f.5: BAR 0: assigned [mem 0x50600000-0x50600fff]
+[    2.657534] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    2.662550] pci 0000:00:06.0:   bridge window [mem 0x52400000-0x524fffff]
+[    2.669398] pci 0000:00:1d.0: PCI bridge to [bus 02]
+[    2.674428] pci 0000:00:1d.0:   bridge window [io  0x5000-0x5fff]
+[    2.680583] pci 0000:00:1d.0:   bridge window [mem 0x50400000-0x505fffff]
+[    2.687435] pci 0000:00:1d.0:   bridge window [mem 0x4017000000-0x40171fffff 64bit pref]
+[    2.695599] pci 0000:00:1d.2: PCI bridge to [bus 03]
+[    2.700617] pci 0000:00:1d.2:   bridge window [io  0x3000-0x3fff]
+[    2.706771] pci 0000:00:1d.2:   bridge window [mem 0x52300000-0x523fffff]
+[    2.713623] pci 0000:00:1d.3: PCI bridge to [bus 04]
+[    2.718645] pci 0000:00:1d.3:   bridge window [mem 0x51000000-0x522fffff]
+[    2.725502] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    2.731743] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    2.737980] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000fffff window]
+[    2.744918] pci_bus 0000:00: resource 7 [mem 0x50400000-0xbfffffff window]
+[    2.751858] pci_bus 0000:00: resource 8 [mem 0x4000000000-0x7fffffffff window]
+[    2.759149] pci_bus 0000:01: resource 1 [mem 0x52400000-0x524fffff]
+[    2.765476] pci_bus 0000:02: resource 0 [io  0x5000-0x5fff]
+[    2.771105] pci_bus 0000:02: resource 1 [mem 0x50400000-0x505fffff]
+[    2.777427] pci_bus 0000:02: resource 2 [mem 0x4017000000-0x40171fffff 64bit pref]
+[    2.785064] pci_bus 0000:03: resource 0 [io  0x3000-0x3fff]
+[    2.790688] pci_bus 0000:03: resource 1 [mem 0x52300000-0x523fffff]
+[    2.797017] pci_bus 0000:04: resource 1 [mem 0x51000000-0x522fffff]
+[    2.804030] PCI: CLS 64 bytes, default 64
+[    2.808104] DMAR: No ATSR found
+[    2.808124] Trying to unpack rootfs image as initramfs...
+[    2.811294] DMAR: No SATC found
+[    2.811296] DMAR: IOMMU feature fl1gp_support inconsistent
+[    2.819941] DMAR: IOMMU feature pgsel_inv inconsistent
+[    2.825479] DMAR: IOMMU feature nwfs inconsistent
+[    2.830677] DMAR: IOMMU feature dit inconsistent
+[    2.835432] DMAR: IOMMU feature sc_support inconsistent
+[    2.840099] DMAR: IOMMU feature dev_iotlb_support inconsistent
+[    2.845374] DMAR: dmar0: Using Queued invalidation
+[    2.856123] DMAR: dmar1: Using Queued invalidation
+[    2.861104] pci 0000:00:02.0: Adding to iommu group 0
+[    2.866241] pci 0000:00:00.0: Adding to iommu group 1
+[    2.871354] pci 0000:00:06.0: Adding to iommu group 2
+[    2.876484] pci 0000:00:0d.0: Adding to iommu group 3
+[    2.881603] pci 0000:00:14.0: Adding to iommu group 4
+[    2.886721] pci 0000:00:14.2: Adding to iommu group 4
+[    2.891883] pci 0000:00:15.0: Adding to iommu group 5
+[    2.897002] pci 0000:00:15.1: Adding to iommu group 5
+[    2.902119] pci 0000:00:15.2: Adding to iommu group 5
+[    2.907245] pci 0000:00:15.3: Adding to iommu group 5
+[    2.912369] pci 0000:00:17.0: Adding to iommu group 6
+[    2.917497] pci 0000:00:19.0: Adding to iommu group 7
+[    2.922618] pci 0000:00:19.1: Adding to iommu group 7
+[    2.927768] pci 0000:00:1d.0: Adding to iommu group 8
+[    2.932877] pci 0000:00:1d.2: Adding to iommu group 9
+[    2.937986] pci 0000:00:1d.3: Adding to iommu group 10
+[    2.943187] pci 0000:00:1e.0: Adding to iommu group 11
+[    2.948389] pci 0000:00:1e.3: Adding to iommu group 11
+[    2.953617] pci 0000:00:1f.0: Adding to iommu group 12
+[    2.958827] pci 0000:00:1f.3: Adding to iommu group 12
+[    2.964057] pci 0000:00:1f.4: Adding to iommu group 12
+[    2.969273] pci 0000:00:1f.5: Adding to iommu group 12
+[    2.974475] pci 0000:01:00.0: Adding to iommu group 13
+[    2.979677] pci 0000:03:00.0: Adding to iommu group 14
+[    2.984874] pci 0000:04:00.0: Adding to iommu group 15
+[    2.990169] DMAR: Intel(R) Virtualization Technology for Directed I/O
+[    2.996671] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    3.003176] software IO TLB: mapped [mem 0x000000003654a000-0x000000003a54a000] (64MB)
+[    3.011220] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2cd5a8bb032, max_idle_ns: 440795365915 ns
+[    3.021372] clocksource: Switched to clocksource tsc
+[    3.026419] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    3.036175] Initialise system trusted keyrings
+[    3.040687] Key type blacklist registered
+[    3.044798] workingset: timestamp_bits=36 max_order=23 bucket_order=0
+[    3.051320] zbud: loaded
+[    3.054183] integrity: Platform Keyring initialized
+[    3.059123] integrity: Machine keyring initialized
+[    3.071566] NET: Registered PF_ALG protocol family
+[    3.076419] xor: automatically using best checksumming function   avx       
+[    3.083525] Key type asymmetric registered
+[    3.087665] Asymmetric key parser 'x509' registered
+[    3.324526] Freeing initrd memory: 37136K
+[    3.332084] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    3.339597] io scheduler mq-deadline registered
+[    3.344183] io scheduler kyber registered
+[    3.348256] io scheduler bfq registered
+[    3.353942] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+[    3.362044] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    3.368989] Monitor-Mwait will be used to enter C-1 state
+[    3.374457] Monitor-Mwait will be used to enter C-2 state
+[    3.379930] Monitor-Mwait will be used to enter C-3 state
+[    3.385394] ACPI: \_SB_.PR00: Found 3 idle states
+[    3.390821] input: Sleep Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input0
+[    3.399268] ACPI: button: Sleep Button [SLPB]
+[    3.403699] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
+[    3.412131] ACPI: button: Power Button [PWRB]
+[    3.416557] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+[    3.424267] ACPI: button: Power Button [PWRF]
+[    3.436633] ACPI: thermal: [Firmware Bug]: No valid trip found
+[    3.442726] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    3.449329] 00:01: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    3.461848] hpet_acpi_add: no address or irqs in _CRS
+[    3.467021] Non-volatile memory driver v1.3
+[    3.471266] Linux agpgart interface v0.103
+[    3.475648] ACPI: bus type drm_connector registered
+[    3.495630] intel-lpss 0000:00:15.0: enabling device (0004 -> 0006)
+[    3.524051] intel-lpss 0000:00:15.1: enabling device (0004 -> 0006)
+[    3.552426] intel-lpss 0000:00:15.2: enabling device (0004 -> 0006)
+[    3.580868] intel-lpss 0000:00:15.3: enabling device (0004 -> 0006)
+[    3.608831] intel-lpss 0000:00:19.0: enabling device (0004 -> 0006)
+[    3.636832] intel-lpss 0000:00:19.1: enabling device (0004 -> 0006)
+[    3.664830] intel-lpss 0000:00:1e.0: enabling device (0000 -> 0002)
+[    3.671772] dw-apb-uart.6: ttyS4 at MMIO 0x4017206000 (irq = 16, base_baud = 6250000) is a 16550A
+[    3.695843] intel-lpss 0000:00:1e.3: enabling device (0004 -> 0006)
+[    3.703006] ahci 0000:00:17.0: version 3.0
+[    3.707452] ahci 0000:00:17.0: AHCI 0001.0301 32 slots 4 ports 6 Gbps 0xf impl SATA mode
+[    3.715616] ahci 0000:00:17.0: flags: 64bit ncq sntf clo only pio slum part ems deso sadm sds 
+[    3.733274] scsi host0: ahci
+[    3.736614] scsi host1: ahci
+[    3.739895] scsi host2: ahci
+[    3.743068] scsi host3: ahci
+[    3.746049] ata1: SATA max UDMA/133 abar m2048@0x52502000 port 0x52502100 irq 126
+[    3.753605] ata2: SATA max UDMA/133 abar m2048@0x52502000 port 0x52502180 irq 126
+[    3.761155] ata3: SATA max UDMA/133 abar m2048@0x52502000 port 0x52502200 irq 126
+[    3.768701] ata4: SATA max UDMA/133 abar m2048@0x52502000 port 0x52502280 irq 126
+[    3.776621] xhci_hcd 0000:00:0d.0: xHCI Host Controller
+[    3.782089] xhci_hcd 0000:00:0d.0: new USB bus registered, assigned bus number 1
+[    3.790639] xhci_hcd 0000:00:0d.0: hcc params 0x20007fc1 hci version 0x120 quirks 0x0000000200009810
+[    3.800161] xhci_hcd 0000:00:0d.0: xHCI Host Controller
+[    3.805522] xhci_hcd 0000:00:0d.0: new USB bus registered, assigned bus number 2
+[    3.812989] xhci_hcd 0000:00:0d.0: Host supports USB 3.1 Enhanced SuperSpeed
+[    3.820132] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.05
+[    3.828467] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.835753] usb usb1: Product: xHCI Host Controller
+[    3.840679] usb usb1: Manufacturer: Linux 6.5.11-300.fc39.x86_64 xhci-hcd
+[    3.847527] usb usb1: SerialNumber: 0000:00:0d.0
+[    3.852368] hub 1-0:1.0: USB hub found
+[    3.856250] hub 1-0:1.0: 1 port detected
+[    3.860330] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.05
+[    3.868671] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.875967] usb usb2: Product: xHCI Host Controller
+[    3.880900] usb usb2: Manufacturer: Linux 6.5.11-300.fc39.x86_64 xhci-hcd
+[    3.887747] usb usb2: SerialNumber: 0000:00:0d.0
+[    3.892655] hub 2-0:1.0: USB hub found
+[    3.896465] hub 2-0:1.0: 4 ports detected
+[    3.900569] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    3.910831] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS01._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    3.922661] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    3.932930] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS01._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    3.944694] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    3.954947] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS02._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    3.966696] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    3.976948] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS02._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    3.988715] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    3.998971] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS03._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.010790] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.021055] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS03._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.032869] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.043125] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS04._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.054914] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.065173] ACPI Error: Aborting method \_SB.PC00.TXHC.RHUB.SS04._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.077315] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    4.082710] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 3
+[    4.085724] ata4: SATA link down (SStatus 4 SControl 300)
+[    4.091270] xhci_hcd 0000:00:14.0: hcc params 0x20007fc1 hci version 0x120 quirks 0x0000000200009810
+[    4.095654] ata1: SATA link down (SStatus 4 SControl 300)
+[    4.105103] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    4.110306] ata3: SATA link down (SStatus 4 SControl 300)
+[    4.115641] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 4
+[    4.121049] ata2: SATA link down (SStatus 4 SControl 300)
+[    4.128488] xhci_hcd 0000:00:14.0: Host supports USB 3.2 Enhanced SuperSpeed
+[    4.128519] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.05
+[    4.149396] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.156680] usb usb3: Product: xHCI Host Controller
+[    4.161615] usb usb3: Manufacturer: Linux 6.5.11-300.fc39.x86_64 xhci-hcd
+[    4.168465] usb usb3: SerialNumber: 0000:00:14.0
+[    4.173370] hub 3-0:1.0: USB hub found
+[    4.177212] hub 3-0:1.0: 16 ports detected
+[    4.182154] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.192413] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS07._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.204168] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.214419] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS07._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.226169] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.236425] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS08._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.248170] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.258427] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS08._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.270190] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.280450] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS09._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.292263] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.302519] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS09._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.314386] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.324643] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS10._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.336421] ACPI BIOS Error (bug): Could not resolve symbol [\_SB.UBTC.RUCC], AE_NOT_FOUND (20230331/psargs-330)
+[    4.346673] ACPI Error: Aborting method \_SB.PC00.XHCI.RHUB.HS10._PLD due to previous error (AE_NOT_FOUND) (20230331/psparse-529)
+[    4.359371] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.05
+[    4.367716] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.375009] usb usb4: Product: xHCI Host Controller
+[    4.379942] usb usb4: Manufacturer: Linux 6.5.11-300.fc39.x86_64 xhci-hcd
+[    4.386785] usb usb4: SerialNumber: 0000:00:14.0
+[    4.391734] hub 4-0:1.0: USB hub found
+[    4.395623] hub 4-0:1.0: 8 ports detected
+[    4.400661] usbcore: registered new interface driver usbserial_generic
+[    4.407258] usbserial: USB Serial support registered for generic
+[    4.413352] i8042: PNP: No PS/2 controller found.
+[    4.418106] i8042: Probing ports directly.
+[    4.423358] i8042: No controller found
+[    4.427283] mousedev: PS/2 mouse device common for all mice
+[    4.433124] rtc_cmos rtc_cmos: RTC can wake from S4
+[    4.439065] rtc_cmos rtc_cmos: registered as rtc0
+[    4.444018] rtc_cmos rtc_cmos: setting system clock to 2023-11-25T17:56:19 UTC (1700934979)
+[    4.452471] rtc_cmos rtc_cmos: alarms up to one month, y3k, 114 bytes nvram
+[    4.460334] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    4.472662] device-mapper: uevent: version 1.0.3
+[    4.477447] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+[    4.486267] intel_pstate: Intel P-state driver initializing
+[    4.493451] intel_pstate: HWP enabled
+[    4.497356] hid: raw HID events driver (C) Jiri Kosina
+[    4.502656] usbcore: registered new interface driver usbhid
+[    4.508296] usbhid: USB HID core driver
+[    4.512326] intel_pmc_core INT33A1:00:  initialized
+[    4.517500] drop_monitor: Initializing network drop monitor service
+[    4.531025] Initializing XFRM netlink socket
+[    4.535389] NET: Registered PF_INET6 protocol family
+[    4.542923] Segment Routing with IPv6
+[    4.546640] RPL Segment Routing with IPv6
+[    4.550713] In-situ OAM (IOAM) with IPv6
+[    4.554699] mip6: Mobile IPv6
+[    4.557709] NET: Registered PF_PACKET protocol family
+[    4.564747] microcode: Microcode Update Driver: v2.2.
+[    4.565168] resctrl: L2 allocation detected
+[    4.574520] IPI shorthand broadcast: enabled
+[    4.578841] AVX2 version of gcm_enc/dec engaged.
+[    4.584153] AES CTR mode by8 optimization enabled
+[    4.589793] sched_clock: Marking stable (3017000479, 1572691937)->(6272108031, -1682415615)
+[    4.598500] registered taskstats version 1
+[    4.603563] Loading compiled-in X.509 certificates
+[    4.614508] Loaded X.509 cert 'Fedora kernel signing key: 9683b67e7848b471927e317332fa1a008bcfdaa9'
+[    4.624706] page_owner is disabled
+[    4.628322] Key type .fscrypt registered
+[    4.632288] Key type fscrypt-provisioning registered
+[    4.637595] Btrfs loaded, zoned=yes, fsverity=yes
+[    4.642360] Key type big_key registered
+[    4.648840] Key type encrypted registered
+[    4.653300] ima: No TPM chip found, activating TPM-bypass!
+[    4.658851] Loading compiled-in module X.509 certificates
+[    4.664634] Loaded X.509 cert 'Fedora kernel signing key: 9683b67e7848b471927e317332fa1a008bcfdaa9'
+[    4.673748] ima: Allocated hash algorithm: sha256
+[    4.678505] ima: No architecture policies found
+[    4.683094] evm: Initialising EVM extended attributes:
+[    4.688284] evm: security.selinux
+[    4.691646] evm: security.SMACK64 (disabled)
+[    4.695963] evm: security.SMACK64EXEC (disabled)
+[    4.700624] evm: security.SMACK64TRANSMUTE (disabled)
+[    4.705725] evm: security.SMACK64MMAP (disabled)
+[    4.710388] evm: security.apparmor (disabled)
+[    4.714787] evm: security.ima
+[    4.717796] evm: security.capability
+[    4.721415] evm: HMAC attrs: 0x1
+[    4.751295] alg: No test for 842 (842-scomp)
+[    4.755750] alg: No test for 842 (842-generic)
+[    4.832772] PM:   Magic number: 15:604:947
+[    4.836949] cpuid cpu2: hash matches
+[    4.840582] tty tty4: hash matches
+[    4.844077] processor cpu2: hash matches
+[    4.848076] memory memory0: hash matches
+[    4.854086] RAS: Correctable Errors collector initialized.
+[    4.859666] clk: Disabling unused clocks
+[    4.870200] Freeing unused decrypted memory: 2036K
+[    4.875556] Freeing unused kernel image (initmem) memory: 4516K
+[    4.881538] Write protecting the kernel read-only data: 34816k
+[    4.887811] Freeing unused kernel image (rodata/data gap) memory: 1908K
+[    4.900005] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    4.906513] Run /init as init process
+[    4.910223]   with arguments:
+[    4.913229]     /init
+[    4.915539]   with environment:
+[    4.918720]     HOME=/
+[    4.921123]     TERM=linux
+[    4.923868]     BOOT_IMAGE=(hd0,gpt2)/vmlinuz-6.5.11-300.fc39.x86_64
+[    4.947621] systemd[1]: systemd 254.5-2.fc39 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP -GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    4.980112] systemd[1]: Detected architecture x86-64.
+[    4.985219] systemd[1]: Running in initrd.
+[    4.989480] systemd[1]: Hostname set to <esther>.
+[    5.052462] systemd[1]: bpf-lsm: LSM BPF program attached
+[    5.091435] systemd[1]: Queued start job for default target initrd.target.
+[    5.109198] systemd[1]: Reached target initrd-usr-fs.target - Initrd /usr File System.
+[    5.117291] systemd[1]: Reached target slices.target - Slice Units.
+[    5.123654] systemd[1]: Reached target swap.target - Swaps.
+[    5.129305] systemd[1]: Reached target timers.target - Timer Units.
+[    5.135713] systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+[    5.143495] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[    5.152503] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+[    5.159859] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    5.168078] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[    5.176090] systemd[1]: Reached target sockets.target - Socket Units.
+[    5.190906] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[    5.200033] systemd[1]: memstrack.service - Memstrack Anylazing Service was skipped because no trigger condition checks were met.
+[    5.212707] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    5.220487] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    5.225234] systemd-journald[332]: Collecting audit messages is disabled.
+[    5.235842] systemd[1]: Starting systemd-sysusers.service - Create System Users...
+[    5.243834] i2c_dev: i2c /dev entries driver
+[    5.243936] systemd[1]: Starting systemd-vconsole-setup.service - Virtual Console Setup...
+[    5.256766] systemd[1]: Started systemd-journald.service - Journal Service.
+[    5.266006] alua: device handler registered
+[    5.271184] emc: device handler registered
+[    5.276397] rdac: device handler registered
+[    5.579442] r8169 0000:03:00.0: enabling device (0000 -> 0003)
+[    5.585569] r8169 0000:03:00.0: can't disable ASPM; OS doesn't have ASPM control
+[    5.587894] pxa2xx-spi pxa2xx-spi.7: no DMA channels available, using PIO
+[    5.601048] r8169 0000:03:00.0 eth0: RTL8168h/8111h, 00:e0:4c:f5:09:07, XID 541, IRQ 129
+[    5.609229] r8169 0000:03:00.0 eth0: jumbo features [frames: 9194 bytes, tx checksumming: ko]
+[    5.636055] nvme nvme0: pci function 0000:01:00.0
+[    5.646840] nvme nvme0: Shutdown timeout set to 10 seconds
+[    5.654662] nvme nvme0: 16/0/0 default/read/poll queues
+[    5.661956]  nvme0n1: p1 p2 p3 p4
+[    5.964191] i915 0000:00:02.0: [drm:intel_gt_common_init_early [i915]] WOPCM: 2048K
+[    5.972028] i915 0000:00:02.0: [drm:intel_uc_init_early [i915]] GT0: enable_guc=0 (guc:no submission:no huc:no slpc:no)
+[    5.983001] i915 0000:00:02.0: [drm:intel_pch_type [i915]] Found Tiger Lake LP PCH
+[    5.990721] i915 0000:00:02.0: [drm] *ERROR* This is a pre-production stepping. It may not be fully functional.
+[    6.000898] i915 0000:00:02.0: [drm:intel_gt_probe_all [i915]] GT0: Setting up Primary GT
+[    6.009294] i915 0000:00:02.0: [drm:intel_uncore_init_mmio [i915]] unclaimed mmio detected on uncore init, clearing
+[    6.019915] i915 0000:00:02.0: [drm:i915_driver_probe [i915]] rawclk rate: 19200 kHz
+[    6.027944] i915 0000:00:02.0: [drm:intel_engines_init_mmio [i915]] vdbox enable: 0005, instances: 0005
+[    6.037482] i915 0000:00:02.0: [drm:intel_engines_init_mmio [i915]] vebox enable: 0001, instances: 0001
+[    6.047337] i915 0000:00:02.0: [drm:i915_ggtt_probe_hw [i915]] GGTT size = 4096M
+[    6.054864] i915 0000:00:02.0: [drm:i915_ggtt_probe_hw [i915]] GMADR size = 256M
+[    6.062392] i915 0000:00:02.0: [drm:i915_ggtt_probe_hw [i915]] DSM size = 60M
+[    6.069657] i915 0000:00:02.0: [drm] VT-d active for gfx access
+[    6.075646] i915 0000:00:02.0: vgaarb: deactivate vga console
+[    6.081488] i915 0000:00:02.0: [drm] Using Transparent Hugepages
+[    6.087555] i915 0000:00:02.0: [drm:i915_gem_init_stolen [i915]] GEN6_STOLEN_RESERVED = 0x00000000502000c7
+[    6.097367] i915 0000:00:02.0: [drm:i915_gem_init_stolen [i915]] Memory reserved for graphics device: 61440K, usable: 59392K
+[    6.108773] i915 0000:00:02.0: [drm:intel_opregion_setup [i915]] graphic opregion physical addr: 0x455d8018
+[    6.118695] i915 0000:00:02.0: [drm:intel_opregion_setup [i915]] ACPI OpRegion version 2.1.0
+[    6.127289] i915 0000:00:02.0: [drm:intel_opregion_setup [i915]] Public ACPI methods supported
+[    6.136049] i915 0000:00:02.0: [drm:intel_opregion_setup [i915]] ASLE supported
+[    6.143517] i915 0000:00:02.0: [drm:intel_opregion_setup [i915]] ASLE extension supported
+[    6.151843] i915 0000:00:02.0: [drm:intel_opregion_setup [i915]] Found valid VBT in ACPI OpRegion (RVDA)
+[    6.161480] i915 0000:00:02.0: [drm:intel_dram_detect [i915]] DRAM channels: 2
+[    6.168840] i915 0000:00:02.0: [drm:i915_driver_probe [i915]] Watermark level 0 adjustment needed: no
+[    6.178213] i915 0000:00:02.0: [drm:icl_get_qgv_points.constprop.0 [i915]] QGV 0: DCLK=2401 tRP=17 tRDPRE=9 tRAS=39 tRCD=17 tRC=56
+[    6.190124] i915 0000:00:02.0: [drm:tgl_get_bw_info.isra.0 [i915]] BW0 / QGV 0: num_planes=0 deratedbw=11176 peakbw: 38416
+[    6.201328] i915 0000:00:02.0: [drm:tgl_get_bw_info.isra.0 [i915]] BW1 / QGV 0: num_planes=2 deratedbw=13575 peakbw: 38416
+[    6.212528] i915 0000:00:02.0: [drm:tgl_get_bw_info.isra.0 [i915]] BW2 / QGV 0: num_planes=0 deratedbw=15208 peakbw: 38416
+[    6.223720] i915 0000:00:02.0: [drm:tgl_get_bw_info.isra.0 [i915]] BW3 / QGV 0: num_planes=0 deratedbw=16181 peakbw: 38416
+[    6.234925] i915 0000:00:02.0: [drm:tgl_get_bw_info.isra.0 [i915]] BW4 / QGV 0: num_planes=0 deratedbw=16716 peakbw: 38416
+[    6.246121] i915 0000:00:02.0: [drm:tgl_get_bw_info.isra.0 [i915]] BW5 / QGV 0: num_planes=0 deratedbw=16997 peakbw: 38416
+[    6.257662] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Set default to SSC at 120000 kHz
+[    6.266251] i915 0000:00:02.0: [drm:intel_bios_init [i915]] VBT signature "$VBT TIGERLAKE      ", BDB version 244
+[    6.276678] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 1 (size 6, min size 7)
+[    6.285794] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 2 (size 356, min size 5)
+[    6.295074] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 9 (size 100, min size 100)
+[    6.304521] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 12 (size 19, min size 19)
+[    6.313888] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 27 (size 812, min size 812)
+[    6.323427] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 40 (size 34, min size 34)
+[    6.332794] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Generating LFP data table pointers
+[    6.341545] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 41 (size 148, min size 148)
+[    6.351082] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 42 (size 1364, min size 1366)
+[    6.360797] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 43 (size 305, min size 305)
+[    6.370330] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 44 (size 58, min size 78)
+[    6.379703] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 52 (size 822, min size 822)
+[    6.389234] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found BDB block 56 (size 210, min size 210)
+[    6.398772] i915 0000:00:02.0: [drm:intel_bios_init [i915]] BDB_GENERAL_FEATURES int_tv_support 0 int_crt_support 0 lvds_use_ssc 0 lvds_ssc_freq 120000 display_clock_mode 1 fdi_rx_polarity_inverted 0
+[    6.416687] i915 0000:00:02.0: [drm:intel_bios_init [i915]] crt_ddc_bus_pin: 2
+[    6.424055] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found VBT child device with type 0x68c6
+[    6.433248] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found VBT child device with type 0x60d2
+[    6.442436] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Found VBT child device with type 0x60d2
+[    6.451624] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Skipping SDVO device mapping
+[    6.459852] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Port B VBT info: CRT:0 DVI:0 HDMI:0 DP:1 eDP:0 DSI:0 DP++:0 LSPCON:0 USB-Type-C:0 TBT:0 DSC:0
+[    6.473748] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Port B VBT HDMI level shift: 0
+[    6.482159] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Port D VBT info: CRT:0 DVI:1 HDMI:1 DP:0 eDP:0 DSI:0 DP++:0 LSPCON:0 USB-Type-C:0 TBT:0 DSC:0
+[    6.496062] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Port D VBT HDMI level shift: 0
+[    6.504464] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Port E VBT info: CRT:0 DVI:1 HDMI:1 DP:0 eDP:0 DSI:0 DP++:0 LSPCON:0 USB-Type-C:0 TBT:0 DSC:0
+[    6.518363] i915 0000:00:02.0: [drm:intel_bios_init [i915]] Port E VBT HDMI level shift: 0
+[    6.526762] i915 0000:00:02.0: [drm:intel_power_domains_init [i915]] Allowed DC state mask 4000000a
+[    6.536033] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 00 to 00
+[    6.545376] i915 0000:00:02.0: [drm:check_phy_reg [i915]] Combo PHY A reg 001628a0 state mismatch: current 9003501c mask e0000000 expected a0000000
+[    6.558767] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY A Voltage/Process Info : 0.85V dot0 (low-voltage)
+[    6.570976] i915 0000:00:02.0: [drm:check_phy_reg [i915]] Combo PHY B reg 0006c8a0 state mismatch: current 9003501c mask e0000000 expected a0000000
+[    6.584361] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY B Voltage/Process Info : 0.85V dot0 (low-voltage)
+[    6.596549] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_1
+[    6.604192] i915 0000:00:02.0: [drm:intel_cdclk_init_hw [i915]] Current CDCLK 652800 kHz, VCO 1305600 kHz, ref 38400 kHz, bypass 19200 kHz, voltage level 3
+[    6.618276] i915 0000:00:02.0: [drm:gen9_dbuf_slices_update [i915]] Updating dbuf slices to 0x3
+[    6.627159] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    6.635216] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling DC_off
+[    6.643014] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 00 to 00
+[    6.652220] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY A Voltage/Process Info : 0.85V dot0 (low-voltage)
+[    6.664402] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY A already enabled, won't reprogram it.
+[    6.674742] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY B Voltage/Process Info : 0.85V dot0 (low-voltage)
+[    6.686910] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY B already enabled, won't reprogram it.
+[    6.697234] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_2
+[    6.704865] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_3
+[    6.712496] i915 0000:00:02.0: vgaarb: changed VGA decodes: olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    6.722049] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_4
+[    6.729677] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_5
+[    6.737320] i915 0000:00:02.0: [drm:intel_power_well_sync_hw [i915]] TC cold unblock succeeded
+[    6.746084] i915 0000:00:02.0: [drm:intel_dmc_init [i915]] Loading i915/tgl_dmc_ver2_12.bin
+[    6.755238] i915 0000:00:02.0: [drm] Finished loading DMC firmware i915/tgl_dmc_ver2_12.bin (v2.12)
+[    6.758768] i915 0000:00:02.0: [drm:intel_fbc_init [i915]] Sanitized enable_fbc value: 1
+[    6.772725] i915 0000:00:02.0: [drm:skl_wm_init [i915]] SAGV supported: no, original SAGV block time: 11 us
+[    6.782670] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM0 latency 3 (3.0 usec)
+[    6.792159] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM1 latency 67 (67.0 usec)
+[    6.801795] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM2 latency 67 (67.0 usec)
+[    6.811417] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM3 latency 67 (67.0 usec)
+[    6.821044] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM4 latency 67 (67.0 usec)
+[    6.830669] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM5 latency 72 (72.0 usec)
+[    6.840296] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM6 latency 135 (135.0 usec)
+[    6.850098] i915 0000:00:02.0: [drm:intel_print_wm_latency [i915]] Gen9 Plane WM7 latency 143 (143.0 usec)
+[    6.860204] i915 0000:00:02.0: [drm:intel_display_driver_probe_nogem [i915]] 4 display pipes available.
+[    6.869908] i915 0000:00:02.0: [drm:intel_cdclk_dump_config [i915]] Current CDCLK 652800 kHz, VCO 1305600 kHz, ref 38400 kHz, bypass 19200 kHz, voltage level 3
+[    6.884347] i915 0000:00:02.0: [drm:intel_update_max_cdclk [i915]] Max CD clock rate: 652800 kHz
+[    6.893287] i915 0000:00:02.0: [drm:intel_display_driver_probe_nogem [i915]] Max dotclock rate: 1305600 kHz
+[    6.903191] i915 0000:00:02.0: [drm:intel_setup_outputs [i915]] VBT says port A is not present
+[    6.911960] i915 0000:00:02.0: [drm:intel_dp_aux_ch [i915]] [ENCODER:307:DDI B/PHY B] using AUX B (VBT)
+[    6.921519] i915 0000:00:02.0: [drm:intel_dp_init_connector [i915]] Adding DP connector on [ENCODER:307:DDI B/PHY B]
+[    6.932206] i915 0000:00:02.0: [drm:intel_dp_aux_ch [i915]] [ENCODER:321:DDI TC1/PHY TC1] using AUX D (platform default)
+[    6.943236] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    6.954726] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    6.963312] i915 0000:00:02.0: [drm:tc_phy_get_current_mode [i915]] Port D/TC#1: PHY mode: disconnected (ready: yes, owned: no, HPD: disconnected)
+[    6.976619] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    6.985062] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    6.994524] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    7.005711] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    7.014256] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    7.022695] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    7.032150] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    7.042728] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    7.051279] i915 0000:00:02.0: [drm:intel_tc_port_update_mode [i915]] Port D/TC#1: TC port mode reset (disconnected -> legacy)
+[    7.062844] i915 0000:00:02.0: [drm:intel_hdmi_init_connector [i915]] Adding HDMI connector on [ENCODER:321:DDI TC1/PHY TC1]
+[    7.074230] i915 0000:00:02.0: [drm:intel_hdmi_init_connector [i915]] [ENCODER:321:DDI TC1/PHY TC1] Using DDC pin 0x9 (VBT)
+[    7.085534] i915 0000:00:02.0: [drm:intel_dp_aux_ch [i915]] [ENCODER:327:DDI TC2/PHY TC2] using AUX E (platform default)
+[    7.096605] i915 0000:00:02.0: [drm:tc_phy_get_current_mode [i915]] Port E/TC#2: PHY mode: disconnected (ready: yes, owned: no, HPD: disconnected)
+[    7.109943] i915 0000:00:02.0: [drm:intel_tc_port_update_mode [i915]] Port E/TC#2: TC port mode reset (disconnected -> legacy)
+[    7.121498] i915 0000:00:02.0: [drm:intel_hdmi_init_connector [i915]] Adding HDMI connector on [ENCODER:327:DDI TC2/PHY TC2]
+[    7.132873] i915 0000:00:02.0: [drm:intel_hdmi_init_connector [i915]] [ENCODER:327:DDI TC2/PHY TC2] Using DDC pin 0xa (VBT)
+[    7.144167] i915 0000:00:02.0: [drm:intel_setup_outputs [i915]] VBT says port F is not present
+[    7.152944] i915 0000:00:02.0: [drm:intel_setup_outputs [i915]] VBT says port G is not present
+[    7.161717] i915 0000:00:02.0: [drm:intel_setup_outputs [i915]] VBT says port H is not present
+[    7.170479] i915 0000:00:02.0: [drm:intel_setup_outputs [i915]] VBT says port I is not present
+[    7.179251] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CRTC:98:pipe A] hw state readout: disabled
+[    7.189942] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CRTC:167:pipe B] hw state readout: disabled
+[    7.200718] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CRTC:236:pipe C] hw state readout: disabled
+[    7.211492] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CRTC:305:pipe D] hw state readout: disabled
+[    7.222259] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:31:plane 1A] hw state readout: disabled, pipe A
+[    7.233898] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:40:plane 2A] hw state readout: disabled, pipe A
+[    7.245538] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:49:plane 3A] hw state readout: disabled, pipe A
+[    7.257168] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:58:plane 4A] hw state readout: disabled, pipe A
+[    7.268797] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:67:plane 5A] hw state readout: disabled, pipe A
+[    7.280429] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:76:plane 6A] hw state readout: disabled, pipe A
+[    7.292060] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:85:plane 7A] hw state readout: disabled, pipe A
+[    7.303697] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:94:cursor A] hw state readout: disabled, pipe A
+[    7.315326] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:100:plane 1B] hw state readout: disabled, pipe B
+[    7.327045] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:109:plane 2B] hw state readout: disabled, pipe B
+[    7.338766] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:118:plane 3B] hw state readout: disabled, pipe B
+[    7.350481] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:127:plane 4B] hw state readout: disabled, pipe B
+[    7.362201] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:136:plane 5B] hw state readout: disabled, pipe B
+[    7.373917] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:145:plane 6B] hw state readout: disabled, pipe B
+[    7.385631] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:154:plane 7B] hw state readout: disabled, pipe B
+[    7.397350] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:163:cursor B] hw state readout: disabled, pipe B
+[    7.409066] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:169:plane 1C] hw state readout: disabled, pipe C
+[    7.420777] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:178:plane 2C] hw state readout: disabled, pipe C
+[    7.432493] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:187:plane 3C] hw state readout: disabled, pipe C
+[    7.444202] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:196:plane 4C] hw state readout: disabled, pipe C
+[    7.455908] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:205:plane 5C] hw state readout: disabled, pipe C
+[    7.467626] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:214:plane 6C] hw state readout: disabled, pipe C
+[    7.479343] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:223:plane 7C] hw state readout: disabled, pipe C
+[    7.491059] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:232:cursor C] hw state readout: disabled, pipe C
+[    7.502779] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:238:plane 1D] hw state readout: disabled, pipe D
+[    7.514494] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:247:plane 2D] hw state readout: disabled, pipe D
+[    7.526213] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:256:plane 3D] hw state readout: disabled, pipe D
+[    7.537924] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:265:plane 4D] hw state readout: disabled, pipe D
+[    7.549631] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:274:plane 5D] hw state readout: disabled, pipe D
+[    7.561352] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:283:plane 6D] hw state readout: disabled, pipe D
+[    7.573065] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:292:plane 7D] hw state readout: disabled, pipe D
+[    7.584779] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:301:cursor D] hw state readout: disabled, pipe D
+[    7.596484] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:307:DDI B/PHY B] hw state readout: disabled, pipe A
+[    7.608631] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:309:DP-MST A] hw state readout: disabled, pipe A
+[    7.620515] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:310:DP-MST B] hw state readout: disabled, pipe B
+[    7.632397] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:311:DP-MST C] hw state readout: disabled, pipe C
+[    7.644294] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:312:DP-MST D] hw state readout: disabled, pipe D
+[    7.656182] i915 0000:00:02.0: [drm:intel_tc_port_sanitize_mode [i915]] Port D/TC#1: sanitize mode (disconnected)
+[    7.666597] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:321:DDI TC1/PHY TC1] hw state readout: disabled, pipe A
+[    7.679099] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    7.687527] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    7.696998] i915 0000:00:02.0: [drm:intel_tc_port_sanitize_mode [i915]] Port E/TC#2: sanitize mode (disconnected)
+[    7.707422] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [ENCODER:327:DDI TC2/PHY TC2] hw state readout: disabled, pipe A
+[    7.719930] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] DPLL 0 hw state readout: pipe_mask 0x0, on 0
+[    7.730613] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] DPLL 1 hw state readout: pipe_mask 0x0, on 0
+[    7.741299] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TBT PLL hw state readout: pipe_mask 0x0, on 0
+[    7.752061] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TC PLL 1 hw state readout: pipe_mask 0x0, on 0
+[    7.762920] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TC PLL 2 hw state readout: pipe_mask 0x0, on 0
+[    7.773769] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TC PLL 3 hw state readout: pipe_mask 0x0, on 0
+[    7.784612] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TC PLL 4 hw state readout: pipe_mask 0x0, on 0
+[    7.795460] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TC PLL 5 hw state readout: pipe_mask 0x0, on 0
+[    7.806311] i915 0000:00:02.0: [drm:intel_dpll_readout_hw_state [i915]] TC PLL 6 hw state readout: pipe_mask 0x0, on 0
+[    7.817154] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CONNECTOR:308:DP-1] hw state readout: disabled
+[    7.828180] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CONNECTOR:322:HDMI-A-1] hw state readout: disabled
+[    7.839557] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [CONNECTOR:328:HDMI-A-2] hw state readout: disabled
+[    7.850921] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:31:plane 1A] min_cdclk 0 kHz
+[    7.860900] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:40:plane 2A] min_cdclk 0 kHz
+[    7.870878] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:49:plane 3A] min_cdclk 0 kHz
+[    7.880850] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:58:plane 4A] min_cdclk 0 kHz
+[    7.890826] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:67:plane 5A] min_cdclk 0 kHz
+[    7.900799] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:76:plane 6A] min_cdclk 0 kHz
+[    7.910773] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:85:plane 7A] min_cdclk 0 kHz
+[    7.920744] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:94:cursor A] min_cdclk 0 kHz
+[    7.930718] i915 0000:00:02.0: [drm:intel_bw_crtc_update [i915]] pipe A data rate 0 num active planes 0
+[    7.940277] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:100:plane 1B] min_cdclk 0 kHz
+[    7.950337] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:109:plane 2B] min_cdclk 0 kHz
+[    7.960397] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:118:plane 3B] min_cdclk 0 kHz
+[    7.970450] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:127:plane 4B] min_cdclk 0 kHz
+[    7.980500] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:136:plane 5B] min_cdclk 0 kHz
+[    7.990555] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:145:plane 6B] min_cdclk 0 kHz
+[    8.000612] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:154:plane 7B] min_cdclk 0 kHz
+[    8.010680] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:163:cursor B] min_cdclk 0 kHz
+[    8.020746] i915 0000:00:02.0: [drm:intel_bw_crtc_update [i915]] pipe B data rate 0 num active planes 0
+[    8.030302] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:169:plane 1C] min_cdclk 0 kHz
+[    8.040364] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:178:plane 2C] min_cdclk 0 kHz
+[    8.050424] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:187:plane 3C] min_cdclk 0 kHz
+[    8.060485] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:196:plane 4C] min_cdclk 0 kHz
+[    8.070553] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:205:plane 5C] min_cdclk 0 kHz
+[    8.080612] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:214:plane 6C] min_cdclk 0 kHz
+[    8.090675] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:223:plane 7C] min_cdclk 0 kHz
+[    8.100741] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:232:cursor C] min_cdclk 0 kHz
+[    8.110796] i915 0000:00:02.0: [drm:intel_bw_crtc_update [i915]] pipe C data rate 0 num active planes 0
+[    8.120358] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:238:plane 1D] min_cdclk 0 kHz
+[    8.130418] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:247:plane 2D] min_cdclk 0 kHz
+[    8.140486] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:256:plane 3D] min_cdclk 0 kHz
+[    8.150543] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:265:plane 4D] min_cdclk 0 kHz
+[    8.160607] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:274:plane 5D] min_cdclk 0 kHz
+[    8.170665] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:283:plane 6D] min_cdclk 0 kHz
+[    8.180730] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:292:plane 7D] min_cdclk 0 kHz
+[    8.190781] i915 0000:00:02.0: [drm:intel_modeset_setup_hw_state [i915]] [PLANE:301:cursor D] min_cdclk 0 kHz
+[    8.200844] i915 0000:00:02.0: [drm:intel_bw_crtc_update [i915]] pipe D data rate 0 num active planes 0
+[    8.210407] i915 0000:00:02.0: [drm:intel_crtc_state_dump [i915]] [CRTC:98:pipe A] enable: no [setup_hw_state]
+[    8.220576] i915 0000:00:02.0: [drm:intel_crtc_state_dump [i915]] [CRTC:167:pipe B] enable: no [setup_hw_state]
+[    8.230824] i915 0000:00:02.0: [drm:intel_crtc_state_dump [i915]] [CRTC:236:pipe C] enable: no [setup_hw_state]
+[    8.241068] i915 0000:00:02.0: [drm:intel_crtc_state_dump [i915]] [CRTC:305:pipe D] enable: no [setup_hw_state]
+[    8.251311] i915 0000:00:02.0: [drm:skl_wm_get_hw_state_and_sanitize [i915]] [CRTC:98:pipe A] dbuf slices 0x0, ddb (0 - 0), active pipes 0x0, mbus joined: no
+[    8.265569] i915 0000:00:02.0: [drm:skl_wm_get_hw_state_and_sanitize [i915]] [CRTC:167:pipe B] dbuf slices 0x0, ddb (0 - 0), active pipes 0x0, mbus joined: no
+[    8.279918] i915 0000:00:02.0: [drm:skl_wm_get_hw_state_and_sanitize [i915]] [CRTC:236:pipe C] dbuf slices 0x0, ddb (0 - 0), active pipes 0x0, mbus joined: no
+[    8.294261] i915 0000:00:02.0: [drm:skl_wm_get_hw_state_and_sanitize [i915]] [CRTC:305:pipe D] dbuf slices 0x0, ddb (0 - 0), active pipes 0x0, mbus joined: no
+[    8.308825] i915 0000:00:02.0: [drm:i915_init_ggtt [i915]] Reserved GGTT:[0, 2000] for use by error capture
+[    8.318725] i915 0000:00:02.0: [drm:i915_init_ggtt [i915]] clearing unused GTT space: [2000, 100000000]
+[    8.328264] MCR Steering: Default steering: group=0x0, instance=0x0
+[    8.334589] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 4 GT workarounds on global
+[    8.343886] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 11 engine workarounds on rcs'0
+[    8.353251] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 4 whitelist workarounds on rcs'0
+[    8.362793] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 6 context workarounds on rcs'0
+[    8.372199] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 engine workarounds on bcs'0
+[    8.381467] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 whitelist workarounds on bcs'0
+[    8.390997] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 context workarounds on bcs'0
+[    8.400367] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 engine workarounds on vcs'0
+[    8.409642] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 whitelist workarounds on vcs'0
+[    8.419191] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 engine workarounds on vcs'2
+[    8.428463] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 whitelist workarounds on vcs'2
+[    8.438006] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 engine workarounds on vecs'0
+[    8.447368] i915 0000:00:02.0: [drm:wa_init_finish [i915]] Initialized 1 whitelist workarounds on vecs'0
+[    8.458176] i915 0000:00:02.0: [drm:engine_rename [i915]] renamed rcs'0 to rcs0
+[    8.465643] i915 0000:00:02.0: [drm:engine_rename [i915]] renamed bcs'0 to bcs0
+[    8.473095] i915 0000:00:02.0: [drm:engine_rename [i915]] renamed vcs'0 to vcs0
+[    8.480532] i915 0000:00:02.0: [drm:engine_rename [i915]] renamed vcs'2 to vcs1
+[    8.487973] i915 0000:00:02.0: [drm:engine_rename [i915]] renamed vecs'0 to vecs0
+[    8.495595] i915 0000:00:02.0: [drm] Protected Xe Path (PXP) protected content support initialized
+[    8.504639] i915 0000:00:02.0: [drm:skl_compute_wm [i915]] Enabled dbuf slices 0x3 -> 0x1 (total dbuf slices 0x3), mbus joined? no->no
+[    8.516925] i915 0000:00:02.0: [drm:gen9_dbuf_slices_update [i915]] Updating dbuf slices to 0x3
+[    8.525814] i915 0000:00:02.0: [drm:gen9_dbuf_slices_update [i915]] Updating dbuf slices to 0x1
+[    8.534704] i915 0000:00:02.0: [drm:intel_fbdev_init [i915]] [CRTC:98:pipe A] not active, skipping
+[    8.543827] i915 0000:00:02.0: [drm:intel_fbdev_init [i915]] [CRTC:167:pipe B] not active, skipping
+[    8.553021] i915 0000:00:02.0: [drm:intel_fbdev_init [i915]] [CRTC:236:pipe C] not active, skipping
+[    8.562219] i915 0000:00:02.0: [drm:intel_fbdev_init [i915]] [CRTC:305:pipe D] not active, skipping
+[    8.571417] i915 0000:00:02.0: [drm:intel_fbdev_init [i915]] no active fbs found, not using BIOS config
+[    8.580955] i915 0000:00:02.0: [drm:i915_gem_open [i915]] 
+[    8.587557] i915 0000:00:02.0: [drm:intel_dp_connector_register [i915]] registering AUX B/DDI B/PHY B bus for card0-DP-1
+[    8.598797] i915 0000:00:02.0: [drm:drm_sysfs_connector_hotplug_event] [CONNECTOR:308:DP-1] generating connector hotplug event
+[    8.610289] i915 0000:00:02.0: [drm:drm_sysfs_connector_hotplug_event] [CONNECTOR:322:HDMI-A-1] generating connector hotplug event
+[    8.622130] i915 0000:00:02.0: [drm:drm_sysfs_connector_hotplug_event] [CONNECTOR:328:HDMI-A-2] generating connector hotplug event
+[    8.633948] [drm] Initialized i915 1.6.0 20201103 for 0000:00:02.0 on minor 0
+[    8.641229] i915 0000:00:02.0: [drm:intel_opregion_resume [i915]] 3 outputs detected
+[    8.649627] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    8.657496] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input3
+[    8.666787] i915 0000:00:02.0: [drm:intel_audio_init [i915]] use AUD_FREQ_CNTRL of 0x8010 (init value 0x8010)
+[    8.676918] [drm:drm_client_modeset_probe] 
+[    8.676911] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_5
+[    8.681156] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1]
+[    8.688879] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_4
+[    8.696152] i915 0000:00:02.0: [drm:intel_dp_detect [i915]] [CONNECTOR:308:DP-1]
+[    8.703873] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_3
+[    8.719042] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_2
+[    8.726841] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling DC_off
+[    8.734846] i915 0000:00:02.0: [drm:skl_enable_dc6 [i915]] Enabling DC6
+[    8.741626] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 00 to 02
+[    8.751283] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    8.759584] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    8.759616] [drm:intel_dsm_detect.isra.0 [i915]] no _DSM method for intel device
+[    8.767699] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    8.775197] i915 device info: pciid=0x9a60 rev=0x00 platform=TIGERLAKE (subplatform=0x0) gen=12
+[    8.783295] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1] status updated from unknown to disconnected
+[    8.783299] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1] disconnected
+[    8.792068] i915 device info: graphics version: 12
+[    8.792070] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1]
+[    8.803184] i915 device info: media version: 12
+[    8.803192] i915 0000:00:02.0: [drm:intel_hdmi_detect [i915]] [CONNECTOR:322:HDMI-A-1]
+[    8.811596] i915 device info: display version: 12
+[    8.811597] i915 device info: graphics stepping: A0
+[    8.811597] i915 device info: media stepping: A0
+[    8.811598] i915 device info: display stepping: B0
+[    8.811599] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    8.816452] i915 device info: base die stepping: **
+[    8.824075] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    8.828658] i915 device info: gt: 0
+[    8.828658] i915 device info: memory-regions: 0x21
+[    8.841755] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    8.846320] i915 device info: page-sizes: 0x211000
+[    8.846320] i915 device info: platform: TIGERLAKE
+[    8.846321] i915 device info: ppgtt-size: 48
+[    8.846340] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    8.851000] i915 device info: ppgtt-type: 2
+[    8.851001] i915 device info: dma_mask_size: 39
+[    8.851022] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    8.855837] i915 device info: is_mobile: no
+[    8.855837] i915 device info: is_lp: no
+[    8.855839] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    8.863815] i915 device info: require_force_probe: no
+[    8.863817] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1] status updated from unknown to disconnected
+[    8.868740] i915 device info: is_dgfx: no
+[    8.868742] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1] disconnected
+[    8.876888] i915 device info: has_64bit_reloc: yes
+[    8.876890] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2]
+[    8.880420] i915 device info: has_64k_pages: no
+[    8.880423] i915 0000:00:02.0: [drm:intel_hdmi_detect [i915]] [CONNECTOR:328:HDMI-A-2]
+[    8.885258] i915 device info: gpu_reset_clobbers_display: no
+[    8.885259] i915 device info: has_reset_engine: yes
+[    8.885260] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    8.893670] i915 device info: has_3d_pipeline: yes
+[    8.893670] i915 device info: has_4tile: no
+[    8.893672] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    8.898510] i915 device info: has_flat_ccs: no
+[    8.902769] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    8.903259] i915 device info: has_global_mocs: yes
+[    8.907593] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    8.915909] i915 device info: has_gmd_id: no
+[    8.915910] i915 device info: has_gt_uc: yes
+[    8.915910] i915 device info: has_heci_pxp: no
+[    8.915929] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    8.920141] i915 device info: has_heci_gscfi: no
+[    8.920141] i915 device info: has_guc_deprivilege: no
+[    8.920143] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    8.924725] i915 device info: has_l3_ccs_read: no
+[    8.924725] i915 device info: has_l3_dpf: no
+[    8.924727] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2] status updated from unknown to disconnected
+[    8.934098] i915 device info: has_llc: yes
+[    8.934101] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2] disconnected
+[    8.938331] i915 device info: has_logical_ring_contexts: yes
+[    8.938333] [drm:drm_client_modeset_probe] No connectors reported connected with modes
+[    8.942212] i915 device info: has_logical_ring_elsq: yes
+[    8.942214] [drm:drm_client_modeset_probe] connector 308 enabled? no
+[    8.950364] i915 device info: has_media_ratio_mode: no
+[    8.950365] [drm:drm_client_modeset_probe] connector 322 enabled? no
+[    8.950366] [drm:drm_client_modeset_probe] connector 328 enabled? no
+[    8.955473] i915 device info: has_mslice_steering: no
+[    8.955477] [drm:drm_client_modeset_probe] Not using firmware configuration
+[    8.966944] i915 device info: has_oa_bpc_reporting: no
+[    8.966944] i915 device info: has_oa_slice_contrib_limits: no
+[    8.966945] i915 device info: has_oam: no
+[    8.966947] [drm:drm_client_modeset_probe] picking CRTCs for 16384x16384 config
+[    8.970998] i915 device info: has_one_eu_per_fuse_bit: no
+[    8.971000] i915 0000:00:02.0: [drm:__drm_fb_helper_initial_config_and_unlock] test CRTC 0 primary plane
+[    8.979758] i915 device info: has_pxp: yes
+[    8.979761] i915 0000:00:02.0: [drm] Cannot find any crtc or sizes
+[    8.984595] i915 device info: has_rc6: yes
+[    8.984619] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    8.992226] i915 device info: has_rc6p: no
+[    8.992227] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling DC_off
+[    8.996802] i915 device info: has_rps: yes
+[    8.997045] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 02 to 00
+[    9.004782] i915 device info: has_runtime_pm: yes
+[    9.005039] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY A Voltage/Process Info : 0.85V dot0 (low-voltage)
+[    9.010499] i915 device info: has_snoop: no
+[    9.010499] i915 device info: has_coherent_ggtt: no
+[    9.010514] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY A already enabled, won't reprogram it.
+[    9.015427] i915 device info: tuning_thread_rr_after_dep: no
+[    9.015440] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY B Voltage/Process Info : 0.85V dot0 (low-voltage)
+[    9.023409] i915 device info: unfenced_needs_alignment: no
+[    9.023422] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY B already enabled, won't reprogram it.
+[    9.028248] i915 device info: hws_needs_physical: no
+[    9.028253] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling DC_off
+[    9.032477] i915 device info: has_pooled_eu: no
+[    9.032479] i915 0000:00:02.0: [drm:skl_enable_dc6 [i915]] Enabling DC6
+[    9.040627] i915 device info: cursor_needs_physical: no
+[    9.040628] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 00 to 02
+[    9.045115] i915 device info: has_cdclk_crawl: no
+[    9.045530] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.053532] i915 device info: has_cdclk_squash: no
+[    9.053540] [drm:drm_client_modeset_probe] 
+[    9.058380] i915 device info: has_ddi: yes
+[    9.058380] i915 device info: has_dp_mst: yes
+[    9.058381] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1]
+[    9.066710] i915 device info: has_dsb: yes
+[    9.066711] i915 device info: has_fpga_dbg: yes
+[    9.066712] i915 0000:00:02.0: [drm:intel_dp_detect [i915]] [CONNECTOR:308:DP-1]
+[    9.071029] i915 device info: has_gmch: no
+[    9.071031] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    9.075349] i915 device info: has_hotplug: yes
+[    9.075365] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.079850] i915 device info: has_hti: no
+[    9.079852] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1] disconnected
+[    9.089224] i915 device info: has_ipc: yes
+[    9.089226] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1]
+[    9.093890] i915 device info: has_overlay: no
+[    9.093891] i915 0000:00:02.0: [drm:intel_hdmi_detect [i915]] [CONNECTOR:322:HDMI-A-1]
+[    9.098997] i915 device info: has_psr: yes
+[    9.098999] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    9.107155] i915 device info: has_psr_hw_tracking: yes
+[    9.107157] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    9.111909] i915 device info: overlay_needs_physical: no
+[    9.116755] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    9.127691] i915 device info: supports_tv: no
+[    9.127691] i915 device info: has_hdcp: yes
+[    9.127692] i915 device info: has_dmc: yes
+[    9.127693] i915 device info: has_dsc: yes
+[    9.127693] i915 device info: rawclk rate: 19200 kHz
+[    9.127694] i915 device info: iommu: enabled
+[    9.127712] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    9.131847] i915 device info: available engines: 41403
+[    9.131870] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    9.140607] i915 device info: slice total: 1, mask=0001
+[    9.140609] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.146319] i915 device info: subslice total: 2
+[    9.146321] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1] disconnected
+[    9.154294] i915 device info: slice0: 2 subslices, mask=00000003
+[    9.154296] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2]
+[    9.159655] i915 device info: EU total: 32
+[    9.159657] i915 0000:00:02.0: [drm:intel_hdmi_detect [i915]] [CONNECTOR:328:HDMI-A-2]
+[    9.166068] i915 device info: EU per subslice: 16
+[    9.166068] i915 device info: has slice power gating: yes
+[    9.171251] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    9.177661] i915 device info: has subslice power gating: no
+[    9.177663] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    9.184075] i915 device info: has EU power gating: no
+[    9.685765] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    9.694332] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    9.702761] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    9.712224] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.720452] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2] disconnected
+[    9.729231] [drm:drm_client_modeset_probe] No connectors reported connected with modes
+[    9.737209] [drm:drm_client_modeset_probe] connector 308 enabled? no
+[    9.743612] [drm:drm_client_modeset_probe] connector 322 enabled? no
+[    9.750021] [drm:drm_client_modeset_probe] connector 328 enabled? no
+[    9.756432] [drm:drm_client_modeset_probe] Not using firmware configuration
+[    9.763451] [drm:drm_client_modeset_probe] picking CRTCs for 16384x16384 config
+[    9.770823] i915 0000:00:02.0: [drm:__drm_fb_helper_initial_config_and_unlock] test CRTC 0 primary plane
+[    9.780367] i915 0000:00:02.0: [drm] Cannot find any crtc or sizes
+[    9.786613] [drm:drm_client_modeset_probe] 
+[    9.790848] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1]
+[    9.798141] i915 0000:00:02.0: [drm:intel_dp_detect [i915]] [CONNECTOR:308:DP-1]
+[    9.805665] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    9.813750] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.821987] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:308:DP-1] disconnected
+[    9.821989] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1]
+[    9.821991] i915 0000:00:02.0: [drm:intel_hdmi_detect [i915]] [CONNECTOR:322:HDMI-A-1]
+[    9.846079] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    9.846158] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    9.865757] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    9.874968] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    9.884754] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    9.895516] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.905114] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:322:HDMI-A-1] disconnected
+[    9.913886] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2]
+[    9.921523] i915 0000:00:02.0: [drm:intel_hdmi_detect [i915]] [CONNECTOR:328:HDMI-A-2]
+[    9.930917] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[    9.938981] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling TC_cold_off
+[    9.950763] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] TC cold block succeeded
+[    9.959835] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling TC_cold_off
+[    9.969624] i915 0000:00:02.0: [drm:__intel_display_power_put_domain [i915]] TC cold unblock succeeded
+[    9.980448] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[    9.990053] [drm:drm_helper_probe_single_connector_modes] [CONNECTOR:328:HDMI-A-2] disconnected
+[    9.998838] [drm:drm_client_modeset_probe] No connectors reported connected with modes
+[   10.006823] [drm:drm_client_modeset_probe] connector 308 enabled? no
+[   10.013240] [drm:drm_client_modeset_probe] connector 322 enabled? no
+[   10.019656] [drm:drm_client_modeset_probe] connector 328 enabled? no
+[   10.026082] [drm:drm_client_modeset_probe] Not using firmware configuration
+[   10.033125] [drm:drm_client_modeset_probe] picking CRTCs for 16384x16384 config
+[   10.041888] i915 0000:00:02.0: [drm:__drm_fb_helper_initial_config_and_unlock] test CRTC 0 primary plane
+[   10.051437] i915 0000:00:02.0: [drm] Cannot find any crtc or sizes
+[   10.072099] EXT4-fs (nvme0n1p3): orphan cleanup on readonly fs
+[   10.079315] EXT4-fs (nvme0n1p3): mounted filesystem 89493ea3-6e01-4664-8009-b6d08fb94246 ro with ordered data mode. Quota mode: none.
+[   10.519879] systemd-journald[332]: Received SIGTERM from PID 1 (systemd).
+[   10.557392] systemd[1]: systemd 254.5-2.fc39 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP -GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[   10.589886] systemd[1]: Detected architecture x86-64.
+[   10.783384] systemd[1]: bpf-lsm: LSM BPF program attached
+[   10.838860] zram: Added device: zram0
+[   10.944267] systemd[1]: initrd-switch-root.service: Deactivated successfully.
+[   10.960927] systemd[1]: Stopped initrd-switch-root.service - Switch Root.
+[   10.968929] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[   10.978706] systemd[1]: Created slice machine.slice - Virtual Machine and Container Slice.
+[   10.988526] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[   10.997177] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[   11.007441] systemd[1]: Created slice system-sshd\x2dkeygen.slice - Slice /system/sshd-keygen.
+[   11.017513] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+[   11.027783] systemd[1]: Created slice system-systemd\x2dzram\x2dsetup.slice - Slice /system/systemd-zram-setup.
+[   11.039305] systemd[1]: Created slice user.slice - User and Session Slice.
+[   11.047545] systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch was skipped because of an unmet condition check (ConditionPathExists=!/run/plymouth/pid).
+[   11.067150] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[   11.079138] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[   11.093098] systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+[   11.102220] systemd[1]: Stopped target initrd-switch-root.target - Switch Root.
+[   11.110884] systemd[1]: Stopped target initrd-fs.target - Initrd File Systems.
+[   11.118367] systemd[1]: Stopped target initrd-root-fs.target - Initrd Root File System.
+[   11.127909] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[   11.138101] systemd[1]: Reached target slices.target - Slice Units.
+[   11.145832] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[   11.155690] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+[   11.165290] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+[   11.181446] systemd[1]: Listening on systemd-coredump.socket - Process Core Dump Socket.
+[   11.189659] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[   11.198625] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+[   11.208375] systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+[   11.219394] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[   11.229044] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   11.238506] systemd[1]: Listening on systemd-userdbd.socket - User Database Manager Socket.
+[   11.257868] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[   11.266267] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   11.275749] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[   11.284964] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   11.294233] systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS was skipped because of an unmet condition check (ConditionPathExists=/etc/krb5.keytab).
+[   11.311861] systemd[1]: iscsi-starter.service was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/var/lib/iscsi/nodes).
+[   11.326439] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[   11.336940] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[   11.350753] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[   11.360675] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+[   11.370165] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[   11.379170] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[   11.389473] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[   11.398594] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[   11.407424] systemd[1]: plymouth-switch-root.service: Deactivated successfully.
+[   11.419333] fuse: init (API version 7.38)
+[   11.424617] loop: module loaded
+[   11.430714] systemd[1]: Stopped plymouth-switch-root.service - Plymouth switch root service.
+[   11.452998] systemd[1]: Starting systemd-journald.service - Journal Service...
+[   11.461032] systemd-journald[660]: Collecting audit messages is enabled.
+[   11.469196] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[   11.478340] systemd[1]: Starting systemd-network-generator.service - Generate network units from Kernel command line...
+[   11.490093] systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+[   11.511703] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[   11.522506] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   11.526207] EXT4-fs (nvme0n1p3): re-mounted 89493ea3-6e01-4664-8009-b6d08fb94246 r/w. Quota mode: none.
+[   11.542326] systemd[1]: Started systemd-journald.service - Journal Service.
+[   11.549986] audit: type=1130 audit(1700934986.604:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.588858] audit: type=1130 audit(1700934986.643:3): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=kmod-static-nodes comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.614873] audit: type=1130 audit(1700934986.669:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.641959] audit: type=1130 audit(1700934986.696:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@configfs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.641963] audit: type=1131 audit(1700934986.696:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@configfs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.691088] audit: type=1130 audit(1700934986.745:7): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@dm_mod comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.710831] audit: type=1131 audit(1700934986.745:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@dm_mod comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.741061] audit: type=1130 audit(1700934986.795:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@drm comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.760847] audit: type=1131 audit(1700934986.795:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@drm comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.794113] audit: type=1130 audit(1700934986.848:11): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=modprobe@efi_pstore comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   11.915174] systemd-journald[660]: Received client request to flush runtime journal.
+[   11.931581] systemd-journald[660]: /var/log/journal/841155953c234ce0b78f667a6fb23cc8/system.journal: Journal file uses a different sequence number ID, rotating.
+[   11.947449] systemd-journald[660]: Rotating system journal.
+[   12.096935] zram0: detected capacity change from 0 to 16777216
+[   12.101831] idma64 idma64.0: Found Intel integrated DMA 64-bit
+[   12.112808] resource: resource sanity check: requesting [mem 0x00000000fedc0000-0x00000000fedcdfff], which spans more than pnp 00:04 [mem 0xfedc0000-0xfedc7fff]
+[   12.127711] caller __uncore_imc_init_box+0xfa/0x150 [intel_uncore] mapping multiple BARs
+[   12.127771] idma64 idma64.1: Found Intel integrated DMA 64-bit
+[   12.128168] i801_smbus 0000:00:1f.4: SPD Write Disable is set
+[   12.128211] i801_smbus 0000:00:1f.4: SMBus using PCI interrupt
+[   12.130534] i2c i2c-16: 2/4 memory slots populated (from DMI)
+[   12.130979] i2c i2c-16: Successfully instantiated SPD at 0x50
+[   12.131676] i2c i2c-16: Successfully instantiated SPD at 0x52
+[   12.174056] iTCO_vendor_support: vendor-support=0
+[   12.174617] ee1004 16-0050: 512 byte EE1004-compliant SPD EEPROM, read-only
+[   12.185776] idma64 idma64.2: Found Intel integrated DMA 64-bit
+[   12.186956] ee1004 16-0052: 512 byte EE1004-compliant SPD EEPROM, read-only
+[   12.205798] idma64 idma64.3: Found Intel integrated DMA 64-bit
+[   12.224787] idma64 idma64.4: Found Intel integrated DMA 64-bit
+[   12.234816] RAPL PMU: API unit is 2^-32 Joules, 3 fixed counters, 655360 ms ovfl timer
+[   12.242779] idma64 idma64.5: Found Intel integrated DMA 64-bit
+[   12.243384] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[   12.255103] RAPL PMU: hw unit of domain package 2^-14 Joules
+[   12.260890] idma64 idma64.6: Found Intel integrated DMA 64-bit
+[   12.262211] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[   12.262344] iTCO_wdt iTCO_wdt: Found a Intel PCH TCO device (Version=6, TCOBASE=0x0400)
+[   12.262421] iTCO_wdt iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   12.286796] idma64 idma64.7: Found Intel integrated DMA 64-bit
+[   12.335291] snd_ctxfi 0000:04:00.0: chip 20K2 model SB0880 (1102:0041) is found
+[   12.344045] snd_ctxfi 0000:04:00.0: enabling device (0000 -> 0002)
+[   12.358285] EXT4-fs (nvme0n1p2): mounted filesystem cc306817-a7ca-4be1-baae-5673514ee327 r/w with ordered data mode. Quota mode: none.
+[   12.374360] EXT4-fs (nvme0n1p4): mounted filesystem a74123ee-e35e-496e-9e4e-50db710d4a42 r/w with ordered data mode. Quota mode: none.
+[   12.384550] Adding 8388604k swap on /dev/zram0.  Priority:100 extents:1 across:8388604k SSDscFS
+[   12.422719] snd_hda_intel 0000:00:1f.3: enabling device (0000 -> 0002)
+[   12.430665] snd_hda_intel 0000:00:1f.3: bound 0000:00:02.0 (ops i915_audio_component_bind_ops [i915])
+[   12.441084] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling always-on
+[   12.450474] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling DC_off
+[   12.459872] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 02 to 00
+[   12.470452] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY A Voltage/Process Info : 0.85V dot0 (low-voltage)
+[   12.483707] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY A already enabled, won't reprogram it.
+[   12.495369] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY B Voltage/Process Info : 0.85V dot0 (low-voltage)
+[   12.508860] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY B already enabled, won't reprogram it.
+[   12.520510] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_2
+[   12.529505] i915 0000:00:02.0: [drm:intel_power_well_enable [i915]] enabling PW_3
+[   12.538501] i915 0000:00:02.0: [drm:i915_audio_component_get_power [i915]] restored AUD_FREQ_CNTRL to 0x8010
+[   12.565196] intel_tcc_cooling: TCC Offset locked
+[   12.574312] intel_rapl_common: Found RAPL domain package
+[   12.580840] intel_rapl_common: Found RAPL domain core
+[   12.585966] intel_rapl_common: Found RAPL domain uncore
+[   12.690078] snd_ctxfi 0000:04:00.0: Use xfi-native timer
+[   12.757803] RPC: Registered named UNIX socket transport module.
+[   12.764531] RPC: Registered udp transport module.
+[   12.764532] RPC: Registered tcp transport module.
+[   12.764532] RPC: Registered tcp-with-tls transport module.
+[   12.764532] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   12.828022] dbus-broker-lau[898]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
+[   13.071707] Generic FE-GE Realtek PHY r8169-0-300:00: attached PHY driver (mii_bus:phy_addr=r8169-0-300:00, irq=MAC)
+[   13.247863] r8169 0000:03:00.0 eth0: Link is Down
+[   13.566803] snd_hda_intel 0000:00:1f.3: azx_get_response timeout, switching to polling mode: last cmd=0x100f0000
+[   14.579804] snd_hda_intel 0000:00:1f.3: No response from codec, disabling MSI: last cmd=0x100f0000
+[   15.589754] snd_hda_intel 0000:00:1f.3: Codec #1 probe error; disabling it...
+[   15.629452] snd_hda_codec_realtek hdaudioC1D0: autoconfig for ALC897: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:line
+[   15.639896] snd_hda_codec_realtek hdaudioC1D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   15.647879] snd_hda_codec_realtek hdaudioC1D0:    hp_outs=1 (0x1b/0x0/0x0/0x0/0x0)
+[   15.655503] snd_hda_codec_realtek hdaudioC1D0:    mono: mono_out=0x0
+[   15.661917] snd_hda_codec_realtek hdaudioC1D0:    inputs:
+[   15.667432] snd_hda_codec_realtek hdaudioC1D0:      Front Mic=0x19
+[   15.673668] snd_hda_codec_realtek hdaudioC1D0:      Rear Mic=0x18
+[   15.679814] snd_hda_codec_realtek hdaudioC1D0:      Line=0x1a
+[   15.715408] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port A
+[   15.724111] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port A
+[   15.732784] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port A
+[   15.741457] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port A
+[   15.750135] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port B
+[   15.758810] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port B
+[   15.767485] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port B
+[   15.776158] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port B
+[   15.784831] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port C
+[   15.793498] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port C
+[   15.802161] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port C
+[   15.810827] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port C
+[   15.819497] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port D
+[   15.828171] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port D
+[   15.836845] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port D
+[   15.845513] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port D
+[   15.854178] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port E
+[   15.862846] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port E
+[   15.871512] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port E
+[   15.880184] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port E
+[   15.888854] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port F
+[   15.897524] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port F
+[   15.906198] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port F
+[   15.914858] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port F
+[   15.923526] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port G
+[   15.932194] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port G
+[   15.940863] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port G
+[   15.949525] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port G
+[   15.958192] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port H
+[   15.966856] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port H
+[   15.975524] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port H
+[   15.984193] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port H
+[   15.992859] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port I
+[   16.002927] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port I
+[   16.012994] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port I
+[   16.023061] i915 0000:00:02.0: [drm:i915_audio_component_get_eld [i915]] Not valid for port I
+[   16.034391] input: HDA Intel PCH Front Mic as /devices/pci0000:00/0000:00:1f.3/sound/card1/input4
+[   16.043574] input: HDA Intel PCH Rear Mic as /devices/pci0000:00/0000:00:1f.3/sound/card1/input5
+[   16.053846] input: HDA Intel PCH Line as /devices/pci0000:00/0000:00:1f.3/sound/card1/input6
+[   16.063546] input: HDA Intel PCH Line Out as /devices/pci0000:00/0000:00:1f.3/sound/card1/input7
+[   16.072471] input: HDA Intel PCH Front Headphone as /devices/pci0000:00/0000:00:1f.3/sound/card1/input8
+[   16.081995] input: HDA Intel PCH HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input9
+[   16.091331] input: HDA Intel PCH HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input10
+[   16.100764] input: HDA Intel PCH HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input11
+[   16.110224] input: HDA Intel PCH HDMI/DP,pcm=9 as /devices/pci0000:00/0000:00:1f.3/sound/card1/input12
+[   16.804978] r8169 0000:03:00.0 eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   17.093031] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[   17.283354] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_3
+[   17.291342] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_2
+[   17.299210] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling DC_off
+[   17.307185] i915 0000:00:02.0: [drm:skl_enable_dc6 [i915]] Enabling DC6
+[   17.313930] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 00 to 02
+[   17.323548] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling always-on
+[   17.332073] tun: Universal TUN/TAP device driver, 1.6
+[   17.337630] virbr0: port 1(vnet0) entered blocking state
+[   17.343006] virbr0: port 1(vnet0) entered disabled state
+[   17.348395] vnet0: entered allmulticast mode
+[   17.352755] vnet0: entered promiscuous mode
+[   17.357118] virbr0: port 1(vnet0) entered blocking state
+[   17.362487] virbr0: port 1(vnet0) entered listening state
+[   17.665278] r8169 0000:03:00.0 eth0: entered promiscuous mode
+[   19.399626] virbr0: port 1(vnet0) entered learning state
+[   21.447500] virbr0: port 1(vnet0) entered forwarding state
+[   21.453061] virbr0: topology change detected, propagating
+[   24.073158] systemd-journald[660]: /var/log/journal/841155953c234ce0b78f667a6fb23cc8/user-1000.journal: Journal file uses a different sequence number ID, rotating.
+[   29.790981] i915 0000:00:02.0: [drm:intel_runtime_suspend [i915]] Suspending device
+[   29.799621] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 02 to 00
+[   29.809103] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY A Voltage/Process Info : 0.85V dot0 (low-voltage)
+[   29.821284] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY A already enabled, won't reprogram it.
+[   29.831632] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY B Voltage/Process Info : 0.85V dot0 (low-voltage)
+[   29.843807] i915 0000:00:02.0: [drm:icl_combo_phys_init [i915]] Combo PHY B already enabled, won't reprogram it.
+[   29.854139] i915 0000:00:02.0: [drm:gen9_dbuf_slices_update [i915]] Updating dbuf slices to 0x0
+[   29.863028] i915 0000:00:02.0: [drm:intel_power_well_disable [i915]] disabling PW_1
+[   29.870849] i915 0000:00:02.0: [drm:icl_verify_procmon_ref_values [i915]] Combo PHY A Voltage/Process Info : 0.85V dot0 (low-voltage)
+[   29.883030] i915 0000:00:02.0: [drm:bxt_enable_dc9 [i915]] Enabling DC9
+[   29.889789] i915 0000:00:02.0: [drm:gen9_set_dc_state.part.0 [i915]] Setting DC state from 00 to 08
+[   29.899000] i915 0000:00:02.0: [drm:intel_runtime_suspend [i915]] Device suspended
